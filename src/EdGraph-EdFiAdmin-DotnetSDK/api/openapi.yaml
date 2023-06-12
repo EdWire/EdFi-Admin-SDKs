@@ -1,0 +1,1305 @@
+openapi: 3.0.1
+info:
+  title: Admin API Documentation
+  version: v1
+servers:
+- url: /
+security:
+- oauth:
+  - api
+paths:
+  /v1/vendors:
+    get:
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.VendorModel'
+                required:
+                - isFixedSize
+                - isReadOnly
+                - isSynchronized
+                - length
+                - longLength
+                - rank
+                - syncRoot
+                type: array
+          description: Success
+      summary: Retrieves all vendors.
+      tags:
+      - Vendors
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.AddVendor+Request'
+        required: true
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.VendorModel'
+          description: Created
+      summary: Creates vendor based on the supplied values.
+      tags:
+      - Vendors
+  /v1/vendors/{id}:
+    delete:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "200":
+          description: Resource was successfully deleted.
+      summary: Deletes an existing vendor using the resource identifier.
+      tags:
+      - Vendors
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.VendorModel'
+          description: Success
+      summary: Retrieves a specific vendor based on the identifier.
+      tags:
+      - Vendors
+    put:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.EditVendor+Request'
+        required: true
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.VendorModel'
+          description: Success
+      summary: Updates vendor based on the resource identifier.
+      tags:
+      - Vendors
+  /v1/claimsets:
+    get:
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetModel'
+                required:
+                - capacity
+                - count
+                - item
+                type: array
+          description: Success
+      summary: Retrieves all claimsets.
+      tags:
+      - Claimsets
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.AddClaimSet+Request'
+        required: true
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetDetailsModel'
+          description: Created
+      summary: Creates claimset based on the supplied values.
+      tags:
+      - Claimsets
+  /v1/claimsets/{id}:
+    delete:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "200":
+          description: Resource was successfully deleted.
+      summary: Deletes an existing claimset using the resource identifier.
+      tags:
+      - Claimsets
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetDetailsModel'
+          description: Success
+      summary: Retrieves a specific claimset based on the identifier.
+      tags:
+      - Claimsets
+    put:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.EditClaimSet+Request'
+        required: true
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetDetailsModel'
+          description: Success
+      summary: Updates claimset based on the resource identifier.
+      tags:
+      - Claimsets
+  /v1/applications:
+    get:
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel'
+                required:
+                - isFixedSize
+                - isReadOnly
+                - isSynchronized
+                - length
+                - longLength
+                - rank
+                - syncRoot
+                type: array
+          description: Success
+      summary: Retrieves all applications.
+      tags:
+      - Applications
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.AddApplication+Request'
+        required: true
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationResult'
+          description: Created
+      summary: Creates application based on the supplied values.
+      tags:
+      - Applications
+  /v1/applications/{id}:
+    delete:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "200":
+          description: Resource was successfully deleted.
+      summary: Deletes an existing application using the resource identifier.
+      tags:
+      - Applications
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel'
+          description: Success
+      summary: Retrieves a specific application based on the identifier.
+      tags:
+      - Applications
+    put:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.EditApplication+Request'
+        required: true
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel'
+          description: Success
+      summary: Updates application based on the resource identifier.
+      tags:
+      - Applications
+  /v1/vendors/{id}/applications:
+    get:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel'
+                required:
+                - isFixedSize
+                - isReadOnly
+                - isSynchronized
+                - length
+                - longLength
+                - rank
+                - syncRoot
+                type: array
+          description: Success
+      summary: Retrieves applications assigned to a specific vendor based on the resource
+        identifier.
+      tags:
+      - Vendors
+  /:
+    get:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Information.InformationResult'
+          description: Success
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Information.InformationResult'
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+      summary: Retrieve API informational metadata
+      tags:
+      - Information
+  /connect/register:
+    post:
+      description: Registers new client
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            encoding:
+              ClientId:
+                style: form
+              ClientSecret:
+                style: form
+              DisplayName:
+                style: form
+            schema:
+              $ref: '#/components/schemas/_connect_register_post_request'
+      responses:
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "200":
+          description: Application registered successfully.
+      summary: Registers new client
+      tags:
+      - Connect
+  /connect/token:
+    post:
+      description: |2-
+
+        To authenticate Swagger requests, execute using "Authorize" above, not "Try It Out" here.
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/_connect_token_post_request'
+      responses:
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "200":
+          description: Sign-in successful.
+      summary: Retrieves bearer token
+      tags:
+      - Connect
+  /v1/applications/{id}/reset-credential:
+    put:
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "401":
+          description: Unauthorized. The request requires authentication
+        "403":
+          description: "Forbidden. The request is authenticated, but not authorized\
+            \ to access this resource"
+        "500":
+          description: Internal server error. An unhandled error occurred on the server.
+            See the response body for details.
+        "404":
+          description: Not found. A resource with given identifier could not be found.
+        "400":
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationResult'
+          description: Success
+      summary: Reset application credentials. Returns new key and secret.
+      tags:
+      - Applications
+components:
+  schemas:
+    EdFi.Ods.Admin.Api.Features.AdminApiError:
+      additionalProperties: false
+      description: Wrapper schema for all error responses
+      properties:
+        status:
+          format: int32
+          readOnly: true
+          type: integer
+        title:
+          nullable: true
+          readOnly: true
+          required:
+          - chars
+          - length
+          type: string
+        errors:
+          items:
+            required:
+            - chars
+            - length
+            type: string
+          nullable: true
+          readOnly: true
+          type: array
+      required:
+      - errors
+      - status
+      - title
+      title: AdminApiError
+      type: object
+    ? EdFi.Ods.Admin.Api.Features.AdminApiResponse`1[[System.Object, System.Private.CoreLib,
+      Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+    : additionalProperties: false
+      description: Wrapper schema for all successful responses
+      properties:
+        status:
+          format: int32
+          readOnly: true
+          type: integer
+        title:
+          nullable: true
+          readOnly: true
+          required:
+          - chars
+          - length
+          type: string
+        result:
+          nullable: true
+          readOnly: true
+      required:
+      - result
+      - status
+      - title
+      title: AdminApiResponse
+      type: object
+    EdFi.Ods.Admin.Api.Features.Applications.AddApplication+Request:
+      additionalProperties: false
+      properties:
+        applicationName:
+          description: Application name
+          required:
+          - chars
+          - length
+          type: string
+        vendorId:
+          description: Vendor/ company id
+          format: int32
+          type: integer
+        claimSetName:
+          description: Claim set name
+          required:
+          - chars
+          - length
+          type: string
+        profileId:
+          description: Profile id
+          format: int32
+          nullable: true
+          required:
+          - hasValue
+          - value
+          type: integer
+        educationOrganizationIds:
+          description: Education organization ids
+          items:
+            format: int32
+            type: integer
+          type: array
+      required:
+      - applicationName
+      - claimSetName
+      - educationOrganizationIds
+      - vendorId
+      title: AddApplicationRequest
+      type: object
+    EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel:
+      additionalProperties: false
+      example:
+        profileName: profileName
+        educationOrganizationId: 6
+        claimSetName: claimSetName
+        applicationId: 0
+        odsInstanceName: odsInstanceName
+        applicationName: applicationName
+      properties:
+        applicationId:
+          format: int32
+          type: integer
+        applicationName:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        claimSetName:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        profileName:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        educationOrganizationId:
+          format: int32
+          type: integer
+        odsInstanceName:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+      required:
+      - applicationId
+      - applicationName
+      - claimSetName
+      - educationOrganizationId
+      - odsInstanceName
+      - profileName
+      title: Application
+      type: object
+    EdFi.Ods.Admin.Api.Features.Applications.ApplicationResult:
+      additionalProperties: false
+      example:
+        secret: secret
+        applicationId: 0
+        key: key
+      properties:
+        applicationId:
+          format: int32
+          type: integer
+        key:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        secret:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+      required:
+      - applicationId
+      - key
+      - secret
+      title: ApplicationKeySecret
+      type: object
+    EdFi.Ods.Admin.Api.Features.Applications.EditApplication+Request:
+      additionalProperties: false
+      properties:
+        applicationId:
+          description: Application id
+          format: int32
+          type: integer
+        applicationName:
+          description: Application name
+          required:
+          - chars
+          - length
+          type: string
+        vendorId:
+          description: Vendor/ company id
+          format: int32
+          type: integer
+        claimSetName:
+          description: Claim set name
+          required:
+          - chars
+          - length
+          type: string
+        profileId:
+          description: Profile id
+          format: int32
+          nullable: true
+          required:
+          - hasValue
+          - value
+          type: integer
+        educationOrganizationIds:
+          description: Education organization ids
+          items:
+            format: int32
+            type: integer
+          type: array
+      required:
+      - applicationId
+      - applicationName
+      - claimSetName
+      - educationOrganizationIds
+      - vendorId
+      title: EditApplicationRequest
+      type: object
+    EdFi.Ods.Admin.Api.Features.ClaimSets.AddClaimSet+Request:
+      additionalProperties: false
+      properties:
+        name:
+          description: Claim set name
+          required:
+          - chars
+          - length
+          type: string
+        resourceClaims:
+          description: Resource Claims
+          items:
+            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel'
+          required:
+          - capacity
+          - count
+          - item
+          type: array
+      required:
+      - name
+      - resourceClaims
+      title: AddClaimSetRequest
+      type: object
+    EdFi.Ods.Admin.Api.Features.ClaimSets.AuthorizationStrategyModel:
+      additionalProperties: false
+      example:
+        authStrategyName: authStrategyName
+        isInheritedFromParent: true
+      properties:
+        authStrategyName:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        isInheritedFromParent:
+          type: boolean
+      required:
+      - authStrategyId
+      - authStrategyName
+      - displayName
+      - isInheritedFromParent
+      title: AuthorizationStrategy
+      type: object
+    EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetDetailsModel:
+      additionalProperties: false
+      example:
+        resourceClaims:
+        - read: true
+          children:
+          - null
+          - null
+          name: name
+          defaultAuthStrategiesForCRUD:
+          - authStrategyName: authStrategyName
+            isInheritedFromParent: true
+          - authStrategyName: authStrategyName
+            isInheritedFromParent: true
+          create: true
+          update: true
+          delete: true
+          authStrategyOverridesForCRUD:
+          - authStrategyName: authStrategyName
+            isInheritedFromParent: true
+          - authStrategyName: authStrategyName
+            isInheritedFromParent: true
+        - read: true
+          children:
+          - null
+          - null
+          name: name
+          defaultAuthStrategiesForCRUD:
+          - authStrategyName: authStrategyName
+            isInheritedFromParent: true
+          - authStrategyName: authStrategyName
+            isInheritedFromParent: true
+          create: true
+          update: true
+          delete: true
+          authStrategyOverridesForCRUD:
+          - authStrategyName: authStrategyName
+            isInheritedFromParent: true
+          - authStrategyName: authStrategyName
+            isInheritedFromParent: true
+        name: name
+        id: 0
+        applicationsCount: 6
+        isSystemReserved: true
+      properties:
+        id:
+          format: int32
+          type: integer
+        name:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        isSystemReserved:
+          type: boolean
+        applicationsCount:
+          format: int32
+          type: integer
+        resourceClaims:
+          items:
+            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel'
+          nullable: true
+          required:
+          - capacity
+          - count
+          - item
+          type: array
+      required:
+      - applicationsCount
+      - id
+      - isSystemReserved
+      - name
+      - resourceClaims
+      title: ClaimSetWithResources
+      type: object
+    EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetModel:
+      additionalProperties: false
+      example:
+        name: name
+        id: 0
+        applicationsCount: 6
+        isSystemReserved: true
+      properties:
+        id:
+          format: int32
+          type: integer
+        name:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        isSystemReserved:
+          type: boolean
+        applicationsCount:
+          format: int32
+          type: integer
+      required:
+      - applicationsCount
+      - id
+      - isSystemReserved
+      - name
+      title: ClaimSet
+      type: object
+    EdFi.Ods.Admin.Api.Features.ClaimSets.EditClaimSet+Request:
+      additionalProperties: false
+      properties:
+        id:
+          description: ClaimSet id
+          format: int32
+          type: integer
+        name:
+          description: Claim set name
+          required:
+          - chars
+          - length
+          type: string
+        resourceClaims:
+          description: Resource Claims
+          items:
+            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel'
+          required:
+          - capacity
+          - count
+          - item
+          type: array
+      required:
+      - id
+      - name
+      - resourceClaims
+      title: EditClaimSetRequest
+      type: object
+    EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel:
+      additionalProperties: false
+      example:
+        read: true
+        children:
+        - null
+        - null
+        name: name
+        defaultAuthStrategiesForCRUD:
+        - authStrategyName: authStrategyName
+          isInheritedFromParent: true
+        - authStrategyName: authStrategyName
+          isInheritedFromParent: true
+        create: true
+        update: true
+        delete: true
+        authStrategyOverridesForCRUD:
+        - authStrategyName: authStrategyName
+          isInheritedFromParent: true
+        - authStrategyName: authStrategyName
+          isInheritedFromParent: true
+      properties:
+        name:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        read:
+          type: boolean
+        create:
+          type: boolean
+        update:
+          type: boolean
+        delete:
+          type: boolean
+        defaultAuthStrategiesForCRUD:
+          items:
+            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.AuthorizationStrategyModel'
+          nullable: true
+          required:
+          - isFixedSize
+          - isReadOnly
+          - isSynchronized
+          - length
+          - longLength
+          - rank
+          - syncRoot
+          type: array
+        authStrategyOverridesForCRUD:
+          items:
+            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.AuthorizationStrategyModel'
+          nullable: true
+          required:
+          - isFixedSize
+          - isReadOnly
+          - isSynchronized
+          - length
+          - longLength
+          - rank
+          - syncRoot
+          type: array
+        children:
+          description: Children are collection of ResourceClaim
+          items:
+            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel'
+          nullable: true
+          required:
+          - capacity
+          - count
+          - item
+          type: array
+      required:
+      - authStrategyOverridesForCRUD
+      - children
+      - create
+      - defaultAuthStrategiesForCRUD
+      - delete
+      - name
+      - read
+      - update
+      title: ResourceClaim
+      type: object
+    EdFi.Ods.Admin.Api.Features.Connect.RegisterService+Request:
+      additionalProperties: false
+      properties:
+        clientId:
+          description: Client id
+          required:
+          - chars
+          - length
+          type: string
+        clientSecret:
+          description: Client secret
+          required:
+          - chars
+          - length
+          type: string
+        displayName:
+          description: Client display name
+          required:
+          - chars
+          - length
+          type: string
+      required:
+      - clientId
+      - clientSecret
+      - displayName
+      title: RegisterClientRequest
+      type: object
+    EdFi.Ods.Admin.Api.Features.Information.InformationResult:
+      additionalProperties: false
+      example:
+        build: build
+        version: version
+      properties:
+        version:
+          description: Application version
+          required:
+          - chars
+          - length
+          type: string
+        build:
+          description: Build / release version
+          required:
+          - chars
+          - length
+          type: string
+      required:
+      - build
+      - version
+      title: Information
+      type: object
+    EdFi.Ods.Admin.Api.Features.Vendors.AddVendor+Request:
+      additionalProperties: false
+      properties:
+        company:
+          description: Vendor/ company name
+          required:
+          - chars
+          - length
+          type: string
+        namespacePrefixes:
+          description: Namespace prefix for the vendor. Multiple namespace prefixes
+            can be provided as comma separated list if required.
+          required:
+          - chars
+          - length
+          type: string
+        contactName:
+          description: Vendor contact name
+          required:
+          - chars
+          - length
+          type: string
+        contactEmailAddress:
+          description: Vendor contact email id
+          required:
+          - chars
+          - length
+          type: string
+      required:
+      - company
+      - contactEmailAddress
+      - contactName
+      - namespacePrefixes
+      title: AddVendorRequest
+      type: object
+    EdFi.Ods.Admin.Api.Features.Vendors.EditVendor+Request:
+      additionalProperties: false
+      properties:
+        vendorId:
+          description: Vendor/ company id
+          format: int32
+          type: integer
+        company:
+          description: Vendor/ company name
+          required:
+          - chars
+          - length
+          type: string
+        namespacePrefixes:
+          description: Namespace prefix for the vendor. Multiple namespace prefixes
+            can be provided as comma separated list if required.
+          required:
+          - chars
+          - length
+          type: string
+        contactName:
+          description: Vendor contact name
+          required:
+          - chars
+          - length
+          type: string
+        contactEmailAddress:
+          description: Vendor contact email id
+          required:
+          - chars
+          - length
+          type: string
+      required:
+      - company
+      - contactEmailAddress
+      - contactName
+      - namespacePrefixes
+      - vendorId
+      title: EditVendorRequest
+      type: object
+    EdFi.Ods.Admin.Api.Features.Vendors.VendorModel:
+      additionalProperties: false
+      example:
+        contactEmailAddress: contactEmailAddress
+        namespacePrefixes: namespacePrefixes
+        contactName: contactName
+        vendorId: 0
+        company: company
+      properties:
+        vendorId:
+          format: int32
+          nullable: true
+          required:
+          - hasValue
+          - value
+          type: integer
+        company:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        namespacePrefixes:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        contactName:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+        contactEmailAddress:
+          nullable: true
+          required:
+          - chars
+          - length
+          type: string
+      required:
+      - company
+      - contactEmailAddress
+      - contactName
+      - namespacePrefixes
+      - vendorId
+      title: Vendor
+      type: object
+    _connect_register_post_request:
+      properties:
+        ClientId:
+          description: Client id
+          required:
+          - chars
+          - length
+          type: string
+        ClientSecret:
+          description: Client secret
+          required:
+          - chars
+          - length
+          type: string
+        DisplayName:
+          description: Client display name
+          required:
+          - chars
+          - length
+          type: string
+      type: object
+    _connect_token_post_request:
+      properties:
+        client_id:
+          type: 'string '
+        client_secret:
+          type: 'string '
+        grant_type:
+          type: 'string '
+        scope:
+          type: string
+      type: object
+  securitySchemes:
+    oauth:
+      flows:
+        clientCredentials:
+          scopes:
+            edfi_admin_api/full_access: Unrestricted access to all Admin API endpoints
+          tokenUrl: https://localhost:7214/connect/token
+      type: oauth2
+
