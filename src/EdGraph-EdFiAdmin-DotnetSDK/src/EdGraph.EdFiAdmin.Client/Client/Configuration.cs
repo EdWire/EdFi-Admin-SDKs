@@ -116,7 +116,7 @@ namespace EdGraph.EdFiAdmin.Client.Client
         {
             Proxy = null;
             UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/1.0.0/csharp");
-            BasePath = "http://localhost";
+            BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -124,7 +124,7 @@ namespace EdGraph.EdFiAdmin.Client.Client
             {
                 {
                     new Dictionary<string, object> {
-                        {"url", ""},
+                        {"url", "/edfi-admin/v1.3/districtspecific"},
                         {"description", "No description provided"},
                     }
                 }
@@ -145,7 +145,7 @@ namespace EdGraph.EdFiAdmin.Client.Client
             IDictionary<string, string> defaultHeaders,
             IDictionary<string, string> apiKey,
             IDictionary<string, string> apiKeyPrefix,
-            string basePath = "http://localhost") : this()
+            string basePath = "http://localhost/edfi-admin/v1.3/districtspecific") : this()
         {
             if (string.IsNullOrWhiteSpace(basePath))
                 throw new ArgumentException("The provided basePath is invalid.", "basePath");

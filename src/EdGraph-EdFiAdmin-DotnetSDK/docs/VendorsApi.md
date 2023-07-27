@@ -1,6 +1,6 @@
 # EdGraph.EdFiAdmin.Client.Api.VendorsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost/edfi-admin/v1.3/districtspecific*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -32,7 +32,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -122,7 +122,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -218,7 +218,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -310,7 +310,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -387,7 +387,7 @@ catch (ApiException e)
 
 <a id="v1vendorsidput"></a>
 # **V1VendorsIdPut**
-> EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsIdPut (int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body)
+> EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsIdPut (int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest)
 
 Updates vendor based on the resource identifier.
 
@@ -406,18 +406,18 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VendorsApi(config);
             var id = 56;  // int | 
-            var body = new EdFiOdsAdminApiFeaturesVendorsEditVendorRequest();  // EdFiOdsAdminApiFeaturesVendorsEditVendorRequest | 
+            var edFiOdsAdminApiFeaturesVendorsEditVendorRequest = new EdFiOdsAdminApiFeaturesVendorsEditVendorRequest(); // EdFiOdsAdminApiFeaturesVendorsEditVendorRequest | 
 
             try
             {
                 // Updates vendor based on the resource identifier.
-                EdFiOdsAdminApiFeaturesVendorsVendorModel result = apiInstance.V1VendorsIdPut(id, body);
+                EdFiOdsAdminApiFeaturesVendorsVendorModel result = apiInstance.V1VendorsIdPut(id, edFiOdsAdminApiFeaturesVendorsEditVendorRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -438,7 +438,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Updates vendor based on the resource identifier.
-    ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> response = apiInstance.V1VendorsIdPutWithHttpInfo(id, body);
+    ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> response = apiInstance.V1VendorsIdPutWithHttpInfo(id, edFiOdsAdminApiFeaturesVendorsEditVendorRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -456,7 +456,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** |  |  |
-| **body** | **EdFiOdsAdminApiFeaturesVendorsEditVendorRequest** |  |  |
+| **edFiOdsAdminApiFeaturesVendorsEditVendorRequest** | [**EdFiOdsAdminApiFeaturesVendorsEditVendorRequest**](EdFiOdsAdminApiFeaturesVendorsEditVendorRequest.md) |  |  |
 
 ### Return type
 
@@ -486,7 +486,7 @@ catch (ApiException e)
 
 <a id="v1vendorspost"></a>
 # **V1VendorsPost**
-> EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsPost (EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body)
+> EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsPost (EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest)
 
 Creates vendor based on the supplied values.
 
@@ -505,17 +505,17 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new VendorsApi(config);
-            var body = new EdFiOdsAdminApiFeaturesVendorsAddVendorRequest();  // EdFiOdsAdminApiFeaturesVendorsAddVendorRequest | 
+            var edFiOdsAdminApiFeaturesVendorsAddVendorRequest = new EdFiOdsAdminApiFeaturesVendorsAddVendorRequest(); // EdFiOdsAdminApiFeaturesVendorsAddVendorRequest | 
 
             try
             {
                 // Creates vendor based on the supplied values.
-                EdFiOdsAdminApiFeaturesVendorsVendorModel result = apiInstance.V1VendorsPost(body);
+                EdFiOdsAdminApiFeaturesVendorsVendorModel result = apiInstance.V1VendorsPost(edFiOdsAdminApiFeaturesVendorsAddVendorRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -536,7 +536,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Creates vendor based on the supplied values.
-    ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> response = apiInstance.V1VendorsPostWithHttpInfo(body);
+    ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> response = apiInstance.V1VendorsPostWithHttpInfo(edFiOdsAdminApiFeaturesVendorsAddVendorRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -553,7 +553,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **body** | **EdFiOdsAdminApiFeaturesVendorsAddVendorRequest** |  |  |
+| **edFiOdsAdminApiFeaturesVendorsAddVendorRequest** | [**EdFiOdsAdminApiFeaturesVendorsAddVendorRequest**](EdFiOdsAdminApiFeaturesVendorsAddVendorRequest.md) |  |  |
 
 ### Return type
 

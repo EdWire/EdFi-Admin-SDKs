@@ -108,8 +108,8 @@ namespace EdGraph.EdFiAdmin.Client.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
-            //EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body = null;
-            //var response = instance.V1VendorsIdPut(id, body);
+            //EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest = null;
+            //var response = instance.V1VendorsIdPut(id, edFiOdsAdminApiFeaturesVendorsEditVendorRequest);
             //Assert.IsType<EdFiOdsAdminApiFeaturesVendorsVendorModel>(response);
         }
 
@@ -120,8 +120,8 @@ namespace EdGraph.EdFiAdmin.Client.Test.Api
         public void V1VendorsPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body = null;
-            //var response = instance.V1VendorsPost(body);
+            //EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest = null;
+            //var response = instance.V1VendorsPost(edFiOdsAdminApiFeaturesVendorsAddVendorRequest);
             //Assert.IsType<EdFiOdsAdminApiFeaturesVendorsVendorModel>(response);
         }
     }

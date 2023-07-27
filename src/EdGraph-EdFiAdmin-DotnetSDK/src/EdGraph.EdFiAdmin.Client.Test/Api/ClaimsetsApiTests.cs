@@ -96,8 +96,8 @@ namespace EdGraph.EdFiAdmin.Client.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
-            //EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body = null;
-            //var response = instance.V1ClaimsetsIdPut(id, body);
+            //EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest = null;
+            //var response = instance.V1ClaimsetsIdPut(id, edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest);
             //Assert.IsType<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>(response);
         }
 
@@ -108,8 +108,8 @@ namespace EdGraph.EdFiAdmin.Client.Test.Api
         public void V1ClaimsetsPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body = null;
-            //var response = instance.V1ClaimsetsPost(body);
+            //EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest = null;
+            //var response = instance.V1ClaimsetsPost(edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest);
             //Assert.IsType<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>(response);
         }
     }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
@@ -6,15 +6,15 @@
     <AssemblyName>EdGraph.EdFiAdmin.Client</AssemblyName>
     <PackageId>EdGraph.EdFiAdmin.Client</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>OpenAPI</Authors>
-    <Company>OpenAPI</Company>
-    <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>A library generated from a OpenAPI doc</Description>
+    <Authors>EdWire</Authors>
+    <Company>EdWire</Company>
+    <AssemblyTitle>EdFi SDK</AssemblyTitle>
+    <Description>Ed-Fi SDK</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>EdGraph.EdFiAdmin.Client</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>2.2.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\EdGraph.EdFiAdmin.Client.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/EdWire/EdFi-Admin-SDKs</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
     <Nullable>annotations</Nullable>

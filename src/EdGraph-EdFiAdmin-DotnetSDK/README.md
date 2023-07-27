@@ -84,7 +84,7 @@ namespace Example
         {
 
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -111,7 +111,7 @@ namespace Example
 <a id="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost/edfi-admin/v1.3/districtspecific*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -146,6 +146,7 @@ Class | Method | HTTP request | Description
  - [Model.EdFiOdsAdminApiFeaturesApplicationsApplicationModel](docs\EdFiOdsAdminApiFeaturesApplicationsApplicationModel.md)
  - [Model.EdFiOdsAdminApiFeaturesApplicationsApplicationResult](docs\EdFiOdsAdminApiFeaturesApplicationsApplicationResult.md)
  - [Model.EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest](docs\EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest.md)
+ - [Model.EdFiOdsAdminApiFeaturesApplicationsProfile](docs\EdFiOdsAdminApiFeaturesApplicationsProfile.md)
  - [Model.EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest](docs\EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest.md)
  - [Model.EdFiOdsAdminApiFeaturesClaimSetsAuthorizationStrategyModel](docs\EdFiOdsAdminApiFeaturesClaimSetsAuthorizationStrategyModel.md)
  - [Model.EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel](docs\EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel.md)

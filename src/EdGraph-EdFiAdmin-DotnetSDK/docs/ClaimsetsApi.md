@@ -1,6 +1,6 @@
 # EdGraph.EdFiAdmin.Client.Api.ClaimsetsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost/edfi-admin/v1.3/districtspecific*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -31,7 +31,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -121,7 +121,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -213,7 +213,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -290,7 +290,7 @@ catch (ApiException e)
 
 <a id="v1claimsetsidput"></a>
 # **V1ClaimsetsIdPut**
-> EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsIdPut (int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body)
+> EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsIdPut (int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest)
 
 Updates claimset based on the resource identifier.
 
@@ -309,18 +309,18 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ClaimsetsApi(config);
             var id = 56;  // int | 
-            var body = new EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest();  // EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest | 
+            var edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest = new EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest(); // EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest | 
 
             try
             {
                 // Updates claimset based on the resource identifier.
-                EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel result = apiInstance.V1ClaimsetsIdPut(id, body);
+                EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel result = apiInstance.V1ClaimsetsIdPut(id, edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -341,7 +341,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Updates claimset based on the resource identifier.
-    ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> response = apiInstance.V1ClaimsetsIdPutWithHttpInfo(id, body);
+    ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> response = apiInstance.V1ClaimsetsIdPutWithHttpInfo(id, edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -359,7 +359,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** |  |  |
-| **body** | **EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest** |  |  |
+| **edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest** | [**EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest**](EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest.md) |  |  |
 
 ### Return type
 
@@ -389,7 +389,7 @@ catch (ApiException e)
 
 <a id="v1claimsetspost"></a>
 # **V1ClaimsetsPost**
-> EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsPost (EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body)
+> EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsPost (EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest)
 
 Creates claimset based on the supplied values.
 
@@ -408,17 +408,17 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ClaimsetsApi(config);
-            var body = new EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest();  // EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest | 
+            var edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest = new EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest(); // EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest | 
 
             try
             {
                 // Creates claimset based on the supplied values.
-                EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel result = apiInstance.V1ClaimsetsPost(body);
+                EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel result = apiInstance.V1ClaimsetsPost(edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -439,7 +439,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Creates claimset based on the supplied values.
-    ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> response = apiInstance.V1ClaimsetsPostWithHttpInfo(body);
+    ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> response = apiInstance.V1ClaimsetsPostWithHttpInfo(edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -456,7 +456,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **body** | **EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest** |  |  |
+| **edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest** | [**EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest**](EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest.md) |  |  |
 
 ### Return type
 

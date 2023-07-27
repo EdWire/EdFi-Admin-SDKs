@@ -28,7 +28,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
     /// <summary>
     /// EdFiOdsAdminApiFeaturesConnectRegisterServiceRequest
     /// </summary>
-    [DataContract(Name = "EdFi.Ods.Admin.Api.Features.Connect.RegisterService+Request")]
+    [DataContract(Name = "EdFi.Ods.AdminApi.Features.Connect.RegisterService.Request")]
     public partial class EdFiOdsAdminApiFeaturesConnectRegisterServiceRequest : IEquatable<EdFiOdsAdminApiFeaturesConnectRegisterServiceRequest>, IValidatableObject
     {
         /// <summary>

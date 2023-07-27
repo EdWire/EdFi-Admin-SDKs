@@ -1,6 +1,6 @@
 # EdGraph.EdFiAdmin.Client.Api.ConnectApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost/edfi-admin/v1.3/districtspecific*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -30,7 +30,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -126,7 +126,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 

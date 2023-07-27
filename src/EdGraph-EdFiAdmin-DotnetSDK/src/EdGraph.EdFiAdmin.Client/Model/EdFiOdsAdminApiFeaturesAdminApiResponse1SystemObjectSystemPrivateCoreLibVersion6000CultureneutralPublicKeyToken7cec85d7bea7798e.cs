@@ -28,7 +28,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
     /// <summary>
     /// Wrapper schema for all successful responses
     /// </summary>
-    [DataContract(Name = "EdFi.Ods.Admin.Api.Features.AdminApiResponse`1[[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]")]
+    [DataContract(Name = "EdFi.Ods.AdminApi.Features.AdminApiResponse`1[[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]")]
     public partial class EdFiOdsAdminApiFeaturesAdminApiResponse1SystemObjectSystemPrivateCoreLibVersion6000CultureneutralPublicKeyToken7cec85d7bea7798e : IEquatable<EdFiOdsAdminApiFeaturesAdminApiResponse1SystemObjectSystemPrivateCoreLibVersion6000CultureneutralPublicKeyToken7cec85d7bea7798e>, IValidatableObject
     {
         /// <summary>

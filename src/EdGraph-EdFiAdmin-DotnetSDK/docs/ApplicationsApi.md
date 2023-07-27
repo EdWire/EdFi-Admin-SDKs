@@ -1,6 +1,6 @@
 # EdGraph.EdFiAdmin.Client.Api.ApplicationsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost/edfi-admin/v1.3/districtspecific*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -32,7 +32,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -122,7 +122,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -214,7 +214,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -291,7 +291,7 @@ catch (ApiException e)
 
 <a id="v1applicationsidput"></a>
 # **V1ApplicationsIdPut**
-> EdFiOdsAdminApiFeaturesApplicationsApplicationModel V1ApplicationsIdPut (int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body)
+> EdFiOdsAdminApiFeaturesApplicationsApplicationModel V1ApplicationsIdPut (int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest)
 
 Updates application based on the resource identifier.
 
@@ -310,18 +310,18 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApplicationsApi(config);
             var id = 56;  // int | 
-            var body = new EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest();  // EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest | 
+            var edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest = new EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest(); // EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest | 
 
             try
             {
                 // Updates application based on the resource identifier.
-                EdFiOdsAdminApiFeaturesApplicationsApplicationModel result = apiInstance.V1ApplicationsIdPut(id, body);
+                EdFiOdsAdminApiFeaturesApplicationsApplicationModel result = apiInstance.V1ApplicationsIdPut(id, edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -342,7 +342,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Updates application based on the resource identifier.
-    ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> response = apiInstance.V1ApplicationsIdPutWithHttpInfo(id, body);
+    ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> response = apiInstance.V1ApplicationsIdPutWithHttpInfo(id, edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -360,7 +360,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** |  |  |
-| **body** | **EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest** |  |  |
+| **edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest** | [**EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest**](EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest.md) |  |  |
 
 ### Return type
 
@@ -409,7 +409,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -487,7 +487,7 @@ catch (ApiException e)
 
 <a id="v1applicationspost"></a>
 # **V1ApplicationsPost**
-> EdFiOdsAdminApiFeaturesApplicationsApplicationResult V1ApplicationsPost (EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body)
+> EdFiOdsAdminApiFeaturesApplicationsApplicationResult V1ApplicationsPost (EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest)
 
 Creates application based on the supplied values.
 
@@ -506,17 +506,17 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "http://localhost/edfi-admin/v1.3/districtspecific";
             // Configure OAuth2 access token for authorization: oauth
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ApplicationsApi(config);
-            var body = new EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest();  // EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest | 
+            var edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest = new EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest(); // EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest | 
 
             try
             {
                 // Creates application based on the supplied values.
-                EdFiOdsAdminApiFeaturesApplicationsApplicationResult result = apiInstance.V1ApplicationsPost(body);
+                EdFiOdsAdminApiFeaturesApplicationsApplicationResult result = apiInstance.V1ApplicationsPost(edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -537,7 +537,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Creates application based on the supplied values.
-    ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> response = apiInstance.V1ApplicationsPostWithHttpInfo(body);
+    ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> response = apiInstance.V1ApplicationsPostWithHttpInfo(edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -554,7 +554,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **body** | **EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest** |  |  |
+| **edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest** | [**EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest**](EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest.md) |  |  |
 
 ### Return type
 

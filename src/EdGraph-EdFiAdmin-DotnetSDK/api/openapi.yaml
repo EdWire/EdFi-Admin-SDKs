@@ -3,7 +3,7 @@ info:
   title: Admin API Documentation
   version: v1
 servers:
-- url: /
+- url: /edfi-admin/v1.3/districtspecific
 security:
 - oauth:
   - api
@@ -24,7 +24,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.VendorModel'
+                  $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Vendors.VendorModel'
                 required:
                 - isFixedSize
                 - isReadOnly
@@ -43,7 +43,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.AddVendor+Request'
+              $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Vendors.AddVendor.Request'
         required: true
       responses:
         "401":
@@ -61,7 +61,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.VendorModel'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Vendors.VendorModel'
           description: Created
       summary: Creates vendor based on the supplied values.
       tags:
@@ -118,7 +118,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.VendorModel'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Vendors.VendorModel'
           description: Success
       summary: Retrieves a specific vendor based on the identifier.
       tags:
@@ -137,7 +137,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.EditVendor+Request'
+              $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Vendors.EditVendor.Request'
         required: true
       responses:
         "401":
@@ -157,7 +157,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Vendors.VendorModel'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Vendors.VendorModel'
           description: Success
       summary: Updates vendor based on the resource identifier.
       tags:
@@ -178,7 +178,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetModel'
+                  $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.ClaimSetModel'
                 required:
                 - capacity
                 - count
@@ -193,7 +193,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.AddClaimSet+Request'
+              $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.AddClaimSet.Request'
         required: true
       responses:
         "401":
@@ -211,7 +211,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetDetailsModel'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.ClaimSetDetailsModel'
           description: Created
       summary: Creates claimset based on the supplied values.
       tags:
@@ -268,7 +268,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetDetailsModel'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.ClaimSetDetailsModel'
           description: Success
       summary: Retrieves a specific claimset based on the identifier.
       tags:
@@ -287,7 +287,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.EditClaimSet+Request'
+              $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.EditClaimSet.Request'
         required: true
       responses:
         "401":
@@ -307,7 +307,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetDetailsModel'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.ClaimSetDetailsModel'
           description: Success
       summary: Updates claimset based on the resource identifier.
       tags:
@@ -328,7 +328,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel'
+                  $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.ApplicationModel'
                 required:
                 - isFixedSize
                 - isReadOnly
@@ -347,7 +347,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.AddApplication+Request'
+              $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.AddApplication.Request'
         required: true
       responses:
         "401":
@@ -365,7 +365,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationResult'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.ApplicationResult'
           description: Created
       summary: Creates application based on the supplied values.
       tags:
@@ -422,7 +422,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.ApplicationModel'
           description: Success
       summary: Retrieves a specific application based on the identifier.
       tags:
@@ -441,7 +441,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.EditApplication+Request'
+              $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.EditApplication.Request'
         required: true
       responses:
         "401":
@@ -461,7 +461,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.ApplicationModel'
           description: Success
       summary: Updates application based on the resource identifier.
       tags:
@@ -493,7 +493,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel'
+                  $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.ApplicationModel'
                 required:
                 - isFixedSize
                 - isReadOnly
@@ -515,13 +515,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Information.InformationResult'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Information.InformationResult'
           description: Success
         "500":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Information.InformationResult'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Information.InformationResult'
           description: Internal server error. An unhandled error occurred on the server.
             See the response body for details.
       summary: Retrieve API informational metadata
@@ -605,14 +605,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.Applications.ApplicationResult'
+                $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.ApplicationResult'
           description: Success
       summary: Reset application credentials. Returns new key and secret.
       tags:
       - Applications
 components:
   schemas:
-    EdFi.Ods.Admin.Api.Features.AdminApiError:
+    EdFi.Ods.AdminApi.Features.AdminApiError:
       additionalProperties: false
       description: Wrapper schema for all error responses
       properties:
@@ -642,7 +642,7 @@ components:
       - title
       title: AdminApiError
       type: object
-    ? EdFi.Ods.Admin.Api.Features.AdminApiResponse`1[[System.Object, System.Private.CoreLib,
+    ? EdFi.Ods.AdminApi.Features.AdminApiResponse`1[[System.Object, System.Private.CoreLib,
       Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
     : additionalProperties: false
       description: Wrapper schema for all successful responses
@@ -667,7 +667,7 @@ components:
       - title
       title: AdminApiResponse
       type: object
-    EdFi.Ods.Admin.Api.Features.Applications.AddApplication+Request:
+    EdFi.Ods.AdminApi.Features.Applications.AddApplication.Request:
       additionalProperties: false
       properties:
         applicationName:
@@ -707,11 +707,15 @@ components:
       - vendorId
       title: AddApplicationRequest
       type: object
-    EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel:
+    EdFi.Ods.AdminApi.Features.Applications.ApplicationModel:
       additionalProperties: false
       example:
         profileName: profileName
         educationOrganizationId: 6
+        profiles:
+        - id: 5
+        - id: 5
+        vendorId: 1
         claimSetName: claimSetName
         applicationId: 0
         odsInstanceName: odsInstanceName
@@ -740,6 +744,10 @@ components:
           type: string
         educationOrganizationId:
           format: int32
+          nullable: true
+          required:
+          - hasValue
+          - value
           type: integer
         odsInstanceName:
           nullable: true
@@ -747,6 +755,20 @@ components:
           - chars
           - length
           type: string
+        vendorId:
+          format: int32
+          nullable: true
+          required:
+          - hasValue
+          - value
+          type: integer
+        profiles:
+          items:
+            $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.Applications.Profile'
+          nullable: true
+          required:
+          - item
+          type: array
       required:
       - applicationId
       - applicationName
@@ -754,9 +776,11 @@ components:
       - educationOrganizationId
       - odsInstanceName
       - profileName
+      - profiles
+      - vendorId
       title: Application
       type: object
-    EdFi.Ods.Admin.Api.Features.Applications.ApplicationResult:
+    EdFi.Ods.AdminApi.Features.Applications.ApplicationResult:
       additionalProperties: false
       example:
         secret: secret
@@ -784,7 +808,7 @@ components:
       - secret
       title: ApplicationKeySecret
       type: object
-    EdFi.Ods.Admin.Api.Features.Applications.EditApplication+Request:
+    EdFi.Ods.AdminApi.Features.Applications.EditApplication.Request:
       additionalProperties: false
       properties:
         applicationId:
@@ -829,7 +853,23 @@ components:
       - vendorId
       title: EditApplicationRequest
       type: object
-    EdFi.Ods.Admin.Api.Features.ClaimSets.AddClaimSet+Request:
+    EdFi.Ods.AdminApi.Features.Applications.Profile:
+      additionalProperties: false
+      example:
+        id: 5
+      properties:
+        id:
+          format: int32
+          nullable: true
+          required:
+          - hasValue
+          - value
+          type: integer
+      required:
+      - id
+      title: Profile
+      type: object
+    EdFi.Ods.AdminApi.Features.ClaimSets.AddClaimSet.Request:
       additionalProperties: false
       properties:
         name:
@@ -841,7 +881,7 @@ components:
         resourceClaims:
           description: Resource Claims
           items:
-            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel'
+            $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.ResourceClaimModel'
           required:
           - capacity
           - count
@@ -852,7 +892,7 @@ components:
       - resourceClaims
       title: AddClaimSetRequest
       type: object
-    EdFi.Ods.Admin.Api.Features.ClaimSets.AuthorizationStrategyModel:
+    EdFi.Ods.AdminApi.Features.ClaimSets.AuthorizationStrategyModel:
       additionalProperties: false
       example:
         authStrategyName: authStrategyName
@@ -873,7 +913,7 @@ components:
       - isInheritedFromParent
       title: AuthorizationStrategy
       type: object
-    EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetDetailsModel:
+    EdFi.Ods.AdminApi.Features.ClaimSets.ClaimSetDetailsModel:
       additionalProperties: false
       example:
         resourceClaims:
@@ -934,7 +974,7 @@ components:
           type: integer
         resourceClaims:
           items:
-            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel'
+            $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.ResourceClaimModel'
           nullable: true
           required:
           - capacity
@@ -949,7 +989,7 @@ components:
       - resourceClaims
       title: ClaimSetWithResources
       type: object
-    EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetModel:
+    EdFi.Ods.AdminApi.Features.ClaimSets.ClaimSetModel:
       additionalProperties: false
       example:
         name: name
@@ -978,7 +1018,7 @@ components:
       - name
       title: ClaimSet
       type: object
-    EdFi.Ods.Admin.Api.Features.ClaimSets.EditClaimSet+Request:
+    EdFi.Ods.AdminApi.Features.ClaimSets.EditClaimSet.Request:
       additionalProperties: false
       properties:
         id:
@@ -994,7 +1034,7 @@ components:
         resourceClaims:
           description: Resource Claims
           items:
-            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel'
+            $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.ResourceClaimModel'
           required:
           - capacity
           - count
@@ -1006,7 +1046,7 @@ components:
       - resourceClaims
       title: EditClaimSetRequest
       type: object
-    EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel:
+    EdFi.Ods.AdminApi.Features.ClaimSets.ResourceClaimModel:
       additionalProperties: false
       example:
         read: true
@@ -1044,7 +1084,7 @@ components:
           type: boolean
         defaultAuthStrategiesForCRUD:
           items:
-            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.AuthorizationStrategyModel'
+            $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.AuthorizationStrategyModel'
           nullable: true
           required:
           - isFixedSize
@@ -1057,7 +1097,7 @@ components:
           type: array
         authStrategyOverridesForCRUD:
           items:
-            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.AuthorizationStrategyModel'
+            $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.AuthorizationStrategyModel'
           nullable: true
           required:
           - isFixedSize
@@ -1071,7 +1111,7 @@ components:
         children:
           description: Children are collection of ResourceClaim
           items:
-            $ref: '#/components/schemas/EdFi.Ods.Admin.Api.Features.ClaimSets.ResourceClaimModel'
+            $ref: '#/components/schemas/EdFi.Ods.AdminApi.Features.ClaimSets.ResourceClaimModel'
           nullable: true
           required:
           - capacity
@@ -1089,7 +1129,7 @@ components:
       - update
       title: ResourceClaim
       type: object
-    EdFi.Ods.Admin.Api.Features.Connect.RegisterService+Request:
+    EdFi.Ods.AdminApi.Features.Connect.RegisterService.Request:
       additionalProperties: false
       properties:
         clientId:
@@ -1116,7 +1156,7 @@ components:
       - displayName
       title: RegisterClientRequest
       type: object
-    EdFi.Ods.Admin.Api.Features.Information.InformationResult:
+    EdFi.Ods.AdminApi.Features.Information.InformationResult:
       additionalProperties: false
       example:
         build: build
@@ -1139,7 +1179,7 @@ components:
       - version
       title: Information
       type: object
-    EdFi.Ods.Admin.Api.Features.Vendors.AddVendor+Request:
+    EdFi.Ods.AdminApi.Features.Vendors.AddVendor.Request:
       additionalProperties: false
       properties:
         company:
@@ -1174,7 +1214,7 @@ components:
       - namespacePrefixes
       title: AddVendorRequest
       type: object
-    EdFi.Ods.Admin.Api.Features.Vendors.EditVendor+Request:
+    EdFi.Ods.AdminApi.Features.Vendors.EditVendor.Request:
       additionalProperties: false
       properties:
         vendorId:
@@ -1214,7 +1254,7 @@ components:
       - vendorId
       title: EditVendorRequest
       type: object
-    EdFi.Ods.Admin.Api.Features.Vendors.VendorModel:
+    EdFi.Ods.AdminApi.Features.Vendors.VendorModel:
       additionalProperties: false
       example:
         contactEmailAddress: contactEmailAddress
@@ -1300,6 +1340,6 @@ components:
         clientCredentials:
           scopes:
             edfi_admin_api/full_access: Unrestricted access to all Admin API endpoints
-          tokenUrl: https://localhost:7214/connect/token
+          tokenUrl: https://api.edgraph.dev/edfi-admin/v1.3/districtspecific/connect/token
       type: oauth2
 

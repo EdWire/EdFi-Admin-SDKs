@@ -90,10 +90,10 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsIdPut(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body, int operationIndex = 0);
+        EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsIdPut(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, int operationIndex = 0);
 
         /// <summary>
         /// Updates claimset based on the resource identifier.
@@ -103,18 +103,18 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body, int operationIndex = 0);
+        ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, int operationIndex = 0);
         /// <summary>
         /// Creates claimset based on the supplied values.
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsPost(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body, int operationIndex = 0);
+        EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsPost(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, int operationIndex = 0);
 
         /// <summary>
         /// Creates claimset based on the supplied values.
@@ -123,10 +123,10 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsPostWithHttpInfo(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body, int operationIndex = 0);
+        ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsPostWithHttpInfo(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -217,11 +217,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsIdPutAsync(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsIdPutAsync(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Updates claimset based on the resource identifier.
@@ -231,11 +231,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>> V1ClaimsetsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>> V1ClaimsetsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Creates claimset based on the supplied values.
         /// </summary>
@@ -243,11 +243,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsPostAsync(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsPostAsync(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Creates claimset based on the supplied values.
@@ -256,11 +256,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>> V1ClaimsetsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>> V1ClaimsetsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -868,12 +868,12 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        public EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsIdPut(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body, int operationIndex = 0)
+        public EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsIdPut(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, int operationIndex = 0)
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> localVarResponse = V1ClaimsetsIdPutWithHttpInfo(id, body);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> localVarResponse = V1ClaimsetsIdPutWithHttpInfo(id, edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest);
             return localVarResponse.Data;
         }
 
@@ -882,15 +882,15 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body, int operationIndex = 0)
+        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest' is set
+            if (edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling ClaimsetsApi->V1ClaimsetsIdPut");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest' when calling ClaimsetsApi->V1ClaimsetsIdPut");
             }
 
             EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
@@ -917,7 +917,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest;
 
             localVarRequestOptions.Operation = "ClaimsetsApi.V1ClaimsetsIdPut";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -958,13 +958,13 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsIdPutAsync(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsIdPutAsync(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> localVarResponse = await V1ClaimsetsIdPutWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> localVarResponse = await V1ClaimsetsIdPutWithHttpInfoAsync(id, edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -973,16 +973,16 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel)</returns>
-        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>> V1ClaimsetsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>> V1ClaimsetsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest' is set
+            if (edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling ClaimsetsApi->V1ClaimsetsIdPut");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest' when calling ClaimsetsApi->V1ClaimsetsIdPut");
             }
 
 
@@ -1010,7 +1010,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesClaimSetsEditClaimSetRequest;
 
             localVarRequestOptions.Operation = "ClaimsetsApi.V1ClaimsetsIdPut";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1051,12 +1051,12 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates claimset based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        public EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsPost(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body, int operationIndex = 0)
+        public EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel V1ClaimsetsPost(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, int operationIndex = 0)
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> localVarResponse = V1ClaimsetsPostWithHttpInfo(body);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> localVarResponse = V1ClaimsetsPostWithHttpInfo(edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest);
             return localVarResponse.Data;
         }
 
@@ -1064,15 +1064,15 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates claimset based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsPostWithHttpInfo(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body, int operationIndex = 0)
+        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsPostWithHttpInfo(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest' is set
+            if (edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling ClaimsetsApi->V1ClaimsetsPost");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest' when calling ClaimsetsApi->V1ClaimsetsPost");
             }
 
             EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
@@ -1098,7 +1098,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest;
 
             localVarRequestOptions.Operation = "ClaimsetsApi.V1ClaimsetsPost";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1138,13 +1138,13 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates claimset based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel</returns>
-        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsPostAsync(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> V1ClaimsetsPostAsync(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> localVarResponse = await V1ClaimsetsPostWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel> localVarResponse = await V1ClaimsetsPostWithHttpInfoAsync(edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1152,16 +1152,16 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates claimset based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel)</returns>
-        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>> V1ClaimsetsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesClaimSetsClaimSetDetailsModel>> V1ClaimsetsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest' is set
+            if (edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling ClaimsetsApi->V1ClaimsetsPost");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest' when calling ClaimsetsApi->V1ClaimsetsPost");
             }
 
 
@@ -1188,7 +1188,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesClaimSetsAddClaimSetRequest;
 
             localVarRequestOptions.Operation = "ClaimsetsApi.V1ClaimsetsPost";
             localVarRequestOptions.OperationIndex = operationIndex;

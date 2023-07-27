@@ -90,10 +90,10 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesApplicationsApplicationModel</returns>
-        EdFiOdsAdminApiFeaturesApplicationsApplicationModel V1ApplicationsIdPut(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body, int operationIndex = 0);
+        EdFiOdsAdminApiFeaturesApplicationsApplicationModel V1ApplicationsIdPut(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, int operationIndex = 0);
 
         /// <summary>
         /// Updates application based on the resource identifier.
@@ -103,10 +103,10 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesApplicationsApplicationModel</returns>
-        ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> V1ApplicationsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body, int operationIndex = 0);
+        ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> V1ApplicationsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, int operationIndex = 0);
         /// <summary>
         /// Reset application credentials. Returns new key and secret.
         /// </summary>
@@ -131,10 +131,10 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates application based on the supplied values.
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesApplicationsApplicationResult</returns>
-        EdFiOdsAdminApiFeaturesApplicationsApplicationResult V1ApplicationsPost(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body, int operationIndex = 0);
+        EdFiOdsAdminApiFeaturesApplicationsApplicationResult V1ApplicationsPost(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, int operationIndex = 0);
 
         /// <summary>
         /// Creates application based on the supplied values.
@@ -143,10 +143,10 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesApplicationsApplicationResult</returns>
-        ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> V1ApplicationsPostWithHttpInfo(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body, int operationIndex = 0);
+        ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> V1ApplicationsPostWithHttpInfo(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -237,11 +237,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesApplicationsApplicationModel</returns>
-        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> V1ApplicationsIdPutAsync(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> V1ApplicationsIdPutAsync(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Updates application based on the resource identifier.
@@ -251,11 +251,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesApplicationsApplicationModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel>> V1ApplicationsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel>> V1ApplicationsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Reset application credentials. Returns new key and secret.
         /// </summary>
@@ -288,11 +288,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesApplicationsApplicationResult</returns>
-        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> V1ApplicationsPostAsync(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> V1ApplicationsPostAsync(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Creates application based on the supplied values.
@@ -301,11 +301,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesApplicationsApplicationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult>> V1ApplicationsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult>> V1ApplicationsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -913,12 +913,12 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesApplicationsApplicationModel</returns>
-        public EdFiOdsAdminApiFeaturesApplicationsApplicationModel V1ApplicationsIdPut(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body, int operationIndex = 0)
+        public EdFiOdsAdminApiFeaturesApplicationsApplicationModel V1ApplicationsIdPut(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, int operationIndex = 0)
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> localVarResponse = V1ApplicationsIdPutWithHttpInfo(id, body);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> localVarResponse = V1ApplicationsIdPutWithHttpInfo(id, edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest);
             return localVarResponse.Data;
         }
 
@@ -927,15 +927,15 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesApplicationsApplicationModel</returns>
-        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> V1ApplicationsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body, int operationIndex = 0)
+        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> V1ApplicationsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest' is set
+            if (edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling ApplicationsApi->V1ApplicationsIdPut");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest' when calling ApplicationsApi->V1ApplicationsIdPut");
             }
 
             EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
@@ -962,7 +962,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest;
 
             localVarRequestOptions.Operation = "ApplicationsApi.V1ApplicationsIdPut";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1003,13 +1003,13 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesApplicationsApplicationModel</returns>
-        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> V1ApplicationsIdPutAsync(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> V1ApplicationsIdPutAsync(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> localVarResponse = await V1ApplicationsIdPutWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel> localVarResponse = await V1ApplicationsIdPutWithHttpInfoAsync(id, edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1018,16 +1018,16 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesApplicationsApplicationModel)</returns>
-        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel>> V1ApplicationsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationModel>> V1ApplicationsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest' is set
+            if (edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling ApplicationsApi->V1ApplicationsIdPut");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest' when calling ApplicationsApi->V1ApplicationsIdPut");
             }
 
 
@@ -1055,7 +1055,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest;
 
             localVarRequestOptions.Operation = "ApplicationsApi.V1ApplicationsIdPut";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1260,12 +1260,12 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates application based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesApplicationsApplicationResult</returns>
-        public EdFiOdsAdminApiFeaturesApplicationsApplicationResult V1ApplicationsPost(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body, int operationIndex = 0)
+        public EdFiOdsAdminApiFeaturesApplicationsApplicationResult V1ApplicationsPost(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, int operationIndex = 0)
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> localVarResponse = V1ApplicationsPostWithHttpInfo(body);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> localVarResponse = V1ApplicationsPostWithHttpInfo(edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest);
             return localVarResponse.Data;
         }
 
@@ -1273,15 +1273,15 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates application based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesApplicationsApplicationResult</returns>
-        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> V1ApplicationsPostWithHttpInfo(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body, int operationIndex = 0)
+        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> V1ApplicationsPostWithHttpInfo(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest' is set
+            if (edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling ApplicationsApi->V1ApplicationsPost");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest' when calling ApplicationsApi->V1ApplicationsPost");
             }
 
             EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
@@ -1307,7 +1307,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest;
 
             localVarRequestOptions.Operation = "ApplicationsApi.V1ApplicationsPost";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1347,13 +1347,13 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates application based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesApplicationsApplicationResult</returns>
-        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> V1ApplicationsPostAsync(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> V1ApplicationsPostAsync(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> localVarResponse = await V1ApplicationsPostWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult> localVarResponse = await V1ApplicationsPostWithHttpInfoAsync(edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1361,16 +1361,16 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates application based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesApplicationsApplicationResult)</returns>
-        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult>> V1ApplicationsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesApplicationsApplicationResult>> V1ApplicationsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest' is set
+            if (edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling ApplicationsApi->V1ApplicationsPost");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest' when calling ApplicationsApi->V1ApplicationsPost");
             }
 
 
@@ -1397,7 +1397,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest;
 
             localVarRequestOptions.Operation = "ApplicationsApi.V1ApplicationsPost";
             localVarRequestOptions.OperationIndex = operationIndex;

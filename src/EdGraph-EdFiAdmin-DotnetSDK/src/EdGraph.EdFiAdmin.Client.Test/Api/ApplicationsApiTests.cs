@@ -96,8 +96,8 @@ namespace EdGraph.EdFiAdmin.Client.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
-            //EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest body = null;
-            //var response = instance.V1ApplicationsIdPut(id, body);
+            //EdFiOdsAdminApiFeaturesApplicationsEditApplicationRequest edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest = null;
+            //var response = instance.V1ApplicationsIdPut(id, edFiOdsAdminApiFeaturesApplicationsEditApplicationRequest);
             //Assert.IsType<EdFiOdsAdminApiFeaturesApplicationsApplicationModel>(response);
         }
 
@@ -120,8 +120,8 @@ namespace EdGraph.EdFiAdmin.Client.Test.Api
         public void V1ApplicationsPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest body = null;
-            //var response = instance.V1ApplicationsPost(body);
+            //EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest = null;
+            //var response = instance.V1ApplicationsPost(edFiOdsAdminApiFeaturesApplicationsAddApplicationRequest);
             //Assert.IsType<EdFiOdsAdminApiFeaturesApplicationsApplicationResult>(response);
         }
     }

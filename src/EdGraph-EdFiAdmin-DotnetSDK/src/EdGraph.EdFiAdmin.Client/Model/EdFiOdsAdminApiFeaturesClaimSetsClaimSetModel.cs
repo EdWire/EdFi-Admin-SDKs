@@ -28,7 +28,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
     /// <summary>
     /// EdFiOdsAdminApiFeaturesClaimSetsClaimSetModel
     /// </summary>
-    [DataContract(Name = "EdFi.Ods.Admin.Api.Features.ClaimSets.ClaimSetModel")]
+    [DataContract(Name = "EdFi.Ods.AdminApi.Features.ClaimSets.ClaimSetModel")]
     public partial class EdFiOdsAdminApiFeaturesClaimSetsClaimSetModel : IEquatable<EdFiOdsAdminApiFeaturesClaimSetsClaimSetModel>, IValidatableObject
     {
         /// <summary>

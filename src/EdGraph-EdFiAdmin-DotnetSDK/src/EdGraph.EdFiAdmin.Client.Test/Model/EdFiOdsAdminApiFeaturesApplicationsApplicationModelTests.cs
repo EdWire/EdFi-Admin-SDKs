@@ -103,6 +103,22 @@ namespace EdGraph.EdFiAdmin.Client.Test.Model
         {
             // TODO unit test for the property 'OdsInstanceName'
         }
+        /// <summary>
+        /// Test the property 'VendorId'
+        /// </summary>
+        [Fact]
+        public void VendorIdTest()
+        {
+            // TODO unit test for the property 'VendorId'
+        }
+        /// <summary>
+        /// Test the property 'Profiles'
+        /// </summary>
+        [Fact]
+        public void ProfilesTest()
+        {
+            // TODO unit test for the property 'Profiles'
+        }
 
     }
 

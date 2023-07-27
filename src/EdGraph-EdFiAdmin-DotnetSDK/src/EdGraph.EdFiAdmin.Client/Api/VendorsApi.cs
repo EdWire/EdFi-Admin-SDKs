@@ -110,10 +110,10 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsEditVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsIdPut(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body, int operationIndex = 0);
+        EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsIdPut(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest, int operationIndex = 0);
 
         /// <summary>
         /// Updates vendor based on the resource identifier.
@@ -123,18 +123,18 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsEditVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body, int operationIndex = 0);
+        ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest, int operationIndex = 0);
         /// <summary>
         /// Creates vendor based on the supplied values.
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsAddVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsPost(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body, int operationIndex = 0);
+        EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsPost(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest, int operationIndex = 0);
 
         /// <summary>
         /// Creates vendor based on the supplied values.
@@ -143,10 +143,10 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsAddVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsPostWithHttpInfo(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body, int operationIndex = 0);
+        ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsPostWithHttpInfo(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -262,11 +262,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsEditVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsIdPutAsync(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsIdPutAsync(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Updates vendor based on the resource identifier.
@@ -276,11 +276,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsEditVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesVendorsVendorModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel>> V1VendorsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel>> V1VendorsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Creates vendor based on the supplied values.
         /// </summary>
@@ -288,11 +288,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsAddVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsPostAsync(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsPostAsync(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Creates vendor based on the supplied values.
@@ -301,11 +301,11 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsAddVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesVendorsVendorModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel>> V1VendorsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel>> V1VendorsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1077,12 +1077,12 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsEditVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        public EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsIdPut(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body, int operationIndex = 0)
+        public EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsIdPut(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest, int operationIndex = 0)
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> localVarResponse = V1VendorsIdPutWithHttpInfo(id, body);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> localVarResponse = V1VendorsIdPutWithHttpInfo(id, edFiOdsAdminApiFeaturesVendorsEditVendorRequest);
             return localVarResponse.Data;
         }
 
@@ -1091,15 +1091,15 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsEditVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body, int operationIndex = 0)
+        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsIdPutWithHttpInfo(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesVendorsEditVendorRequest' is set
+            if (edFiOdsAdminApiFeaturesVendorsEditVendorRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling VendorsApi->V1VendorsIdPut");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesVendorsEditVendorRequest' when calling VendorsApi->V1VendorsIdPut");
             }
 
             EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
@@ -1126,7 +1126,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesVendorsEditVendorRequest;
 
             localVarRequestOptions.Operation = "VendorsApi.V1VendorsIdPut";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1167,13 +1167,13 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsEditVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsIdPutAsync(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsIdPutAsync(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> localVarResponse = await V1VendorsIdPutWithHttpInfoAsync(id, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> localVarResponse = await V1VendorsIdPutWithHttpInfoAsync(id, edFiOdsAdminApiFeaturesVendorsEditVendorRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1182,16 +1182,16 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsEditVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesVendorsVendorModel)</returns>
-        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel>> V1VendorsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel>> V1VendorsIdPutWithHttpInfoAsync(int id, EdFiOdsAdminApiFeaturesVendorsEditVendorRequest edFiOdsAdminApiFeaturesVendorsEditVendorRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesVendorsEditVendorRequest' is set
+            if (edFiOdsAdminApiFeaturesVendorsEditVendorRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling VendorsApi->V1VendorsIdPut");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesVendorsEditVendorRequest' when calling VendorsApi->V1VendorsIdPut");
             }
 
 
@@ -1219,7 +1219,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesVendorsEditVendorRequest;
 
             localVarRequestOptions.Operation = "VendorsApi.V1VendorsIdPut";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1260,12 +1260,12 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates vendor based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsAddVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        public EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsPost(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body, int operationIndex = 0)
+        public EdFiOdsAdminApiFeaturesVendorsVendorModel V1VendorsPost(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest, int operationIndex = 0)
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> localVarResponse = V1VendorsPostWithHttpInfo(body);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> localVarResponse = V1VendorsPostWithHttpInfo(edFiOdsAdminApiFeaturesVendorsAddVendorRequest);
             return localVarResponse.Data;
         }
 
@@ -1273,15 +1273,15 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates vendor based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsAddVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsPostWithHttpInfo(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body, int operationIndex = 0)
+        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsPostWithHttpInfo(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest, int operationIndex = 0)
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesVendorsAddVendorRequest' is set
+            if (edFiOdsAdminApiFeaturesVendorsAddVendorRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling VendorsApi->V1VendorsPost");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesVendorsAddVendorRequest' when calling VendorsApi->V1VendorsPost");
             }
 
             EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
@@ -1307,7 +1307,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesVendorsAddVendorRequest;
 
             localVarRequestOptions.Operation = "VendorsApi.V1VendorsPost";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1347,13 +1347,13 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates vendor based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsAddVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EdFiOdsAdminApiFeaturesVendorsVendorModel</returns>
-        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsPostAsync(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdFiOdsAdminApiFeaturesVendorsVendorModel> V1VendorsPostAsync(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> localVarResponse = await V1VendorsPostWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel> localVarResponse = await V1VendorsPostWithHttpInfoAsync(edFiOdsAdminApiFeaturesVendorsAddVendorRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1361,16 +1361,16 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// Creates vendor based on the supplied values. 
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="edFiOdsAdminApiFeaturesVendorsAddVendorRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EdFiOdsAdminApiFeaturesVendorsVendorModel)</returns>
-        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel>> V1VendorsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdFiOdsAdminApiFeaturesVendorsVendorModel>> V1VendorsPostWithHttpInfoAsync(EdFiOdsAdminApiFeaturesVendorsAddVendorRequest edFiOdsAdminApiFeaturesVendorsAddVendorRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'edFiOdsAdminApiFeaturesVendorsAddVendorRequest' is set
+            if (edFiOdsAdminApiFeaturesVendorsAddVendorRequest == null)
             {
-                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'body' when calling VendorsApi->V1VendorsPost");
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'edFiOdsAdminApiFeaturesVendorsAddVendorRequest' when calling VendorsApi->V1VendorsPost");
             }
 
 
@@ -1397,7 +1397,7 @@ namespace EdGraph.EdFiAdmin.Client.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = edFiOdsAdminApiFeaturesVendorsAddVendorRequest;
 
             localVarRequestOptions.Operation = "VendorsApi.V1VendorsPost";
             localVarRequestOptions.OperationIndex = operationIndex;

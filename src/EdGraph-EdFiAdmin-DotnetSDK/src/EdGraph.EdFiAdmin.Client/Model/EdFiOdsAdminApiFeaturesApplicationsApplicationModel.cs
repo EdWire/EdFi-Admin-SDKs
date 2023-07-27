@@ -28,7 +28,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
     /// <summary>
     /// EdFiOdsAdminApiFeaturesApplicationsApplicationModel
     /// </summary>
-    [DataContract(Name = "EdFi.Ods.Admin.Api.Features.Applications.ApplicationModel")]
+    [DataContract(Name = "EdFi.Ods.AdminApi.Features.Applications.ApplicationModel")]
     public partial class EdFiOdsAdminApiFeaturesApplicationsApplicationModel : IEquatable<EdFiOdsAdminApiFeaturesApplicationsApplicationModel>, IValidatableObject
     {
         /// <summary>
@@ -45,7 +45,9 @@ namespace EdGraph.EdFiAdmin.Client.Model
         /// <param name="profileName">profileName (required).</param>
         /// <param name="educationOrganizationId">educationOrganizationId (required).</param>
         /// <param name="odsInstanceName">odsInstanceName (required).</param>
-        public EdFiOdsAdminApiFeaturesApplicationsApplicationModel(int applicationId = default(int), string applicationName = default(string), string claimSetName = default(string), string profileName = default(string), int educationOrganizationId = default(int), string odsInstanceName = default(string))
+        /// <param name="vendorId">vendorId (required).</param>
+        /// <param name="profiles">profiles (required).</param>
+        public EdFiOdsAdminApiFeaturesApplicationsApplicationModel(int applicationId = default(int), string applicationName = default(string), string claimSetName = default(string), string profileName = default(string), int? educationOrganizationId = default(int?), string odsInstanceName = default(string), int? vendorId = default(int?), List<EdFiOdsAdminApiFeaturesApplicationsProfile> profiles = default(List<EdFiOdsAdminApiFeaturesApplicationsProfile>))
         {
             this.ApplicationId = applicationId;
             // to ensure "applicationName" is required (not null)
@@ -66,6 +68,11 @@ namespace EdGraph.EdFiAdmin.Client.Model
                 throw new ArgumentNullException("profileName is a required property for EdFiOdsAdminApiFeaturesApplicationsApplicationModel and cannot be null");
             }
             this.ProfileName = profileName;
+            // to ensure "educationOrganizationId" is required (not null)
+            if (educationOrganizationId == null)
+            {
+                throw new ArgumentNullException("educationOrganizationId is a required property for EdFiOdsAdminApiFeaturesApplicationsApplicationModel and cannot be null");
+            }
             this.EducationOrganizationId = educationOrganizationId;
             // to ensure "odsInstanceName" is required (not null)
             if (odsInstanceName == null)
@@ -73,6 +80,18 @@ namespace EdGraph.EdFiAdmin.Client.Model
                 throw new ArgumentNullException("odsInstanceName is a required property for EdFiOdsAdminApiFeaturesApplicationsApplicationModel and cannot be null");
             }
             this.OdsInstanceName = odsInstanceName;
+            // to ensure "vendorId" is required (not null)
+            if (vendorId == null)
+            {
+                throw new ArgumentNullException("vendorId is a required property for EdFiOdsAdminApiFeaturesApplicationsApplicationModel and cannot be null");
+            }
+            this.VendorId = vendorId;
+            // to ensure "profiles" is required (not null)
+            if (profiles == null)
+            {
+                throw new ArgumentNullException("profiles is a required property for EdFiOdsAdminApiFeaturesApplicationsApplicationModel and cannot be null");
+            }
+            this.Profiles = profiles;
         }
 
         /// <summary>
@@ -103,13 +122,25 @@ namespace EdGraph.EdFiAdmin.Client.Model
         /// Gets or Sets EducationOrganizationId
         /// </summary>
         [DataMember(Name = "educationOrganizationId", IsRequired = true, EmitDefaultValue = true)]
-        public int EducationOrganizationId { get; set; }
+        public int? EducationOrganizationId { get; set; }
 
         /// <summary>
         /// Gets or Sets OdsInstanceName
         /// </summary>
         [DataMember(Name = "odsInstanceName", IsRequired = true, EmitDefaultValue = true)]
         public string OdsInstanceName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VendorId
+        /// </summary>
+        [DataMember(Name = "vendorId", IsRequired = true, EmitDefaultValue = true)]
+        public int? VendorId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Profiles
+        /// </summary>
+        [DataMember(Name = "profiles", IsRequired = true, EmitDefaultValue = true)]
+        public List<EdFiOdsAdminApiFeaturesApplicationsProfile> Profiles { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -125,6 +156,8 @@ namespace EdGraph.EdFiAdmin.Client.Model
             sb.Append("  ProfileName: ").Append(ProfileName).Append("\n");
             sb.Append("  EducationOrganizationId: ").Append(EducationOrganizationId).Append("\n");
             sb.Append("  OdsInstanceName: ").Append(OdsInstanceName).Append("\n");
+            sb.Append("  VendorId: ").Append(VendorId).Append("\n");
+            sb.Append("  Profiles: ").Append(Profiles).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,12 +214,24 @@ namespace EdGraph.EdFiAdmin.Client.Model
                 ) && 
                 (
                     this.EducationOrganizationId == input.EducationOrganizationId ||
-                    this.EducationOrganizationId.Equals(input.EducationOrganizationId)
+                    (this.EducationOrganizationId != null &&
+                    this.EducationOrganizationId.Equals(input.EducationOrganizationId))
                 ) && 
                 (
                     this.OdsInstanceName == input.OdsInstanceName ||
                     (this.OdsInstanceName != null &&
                     this.OdsInstanceName.Equals(input.OdsInstanceName))
+                ) && 
+                (
+                    this.VendorId == input.VendorId ||
+                    (this.VendorId != null &&
+                    this.VendorId.Equals(input.VendorId))
+                ) && 
+                (
+                    this.Profiles == input.Profiles ||
+                    this.Profiles != null &&
+                    input.Profiles != null &&
+                    this.Profiles.SequenceEqual(input.Profiles)
                 );
         }
 
@@ -212,10 +257,21 @@ namespace EdGraph.EdFiAdmin.Client.Model
                 {
                     hashCode = (hashCode * 59) + this.ProfileName.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.EducationOrganizationId.GetHashCode();
+                if (this.EducationOrganizationId != null)
+                {
+                    hashCode = (hashCode * 59) + this.EducationOrganizationId.GetHashCode();
+                }
                 if (this.OdsInstanceName != null)
                 {
                     hashCode = (hashCode * 59) + this.OdsInstanceName.GetHashCode();
+                }
+                if (this.VendorId != null)
+                {
+                    hashCode = (hashCode * 59) + this.VendorId.GetHashCode();
+                }
+                if (this.Profiles != null)
+                {
+                    hashCode = (hashCode * 59) + this.Profiles.GetHashCode();
                 }
                 return hashCode;
             }

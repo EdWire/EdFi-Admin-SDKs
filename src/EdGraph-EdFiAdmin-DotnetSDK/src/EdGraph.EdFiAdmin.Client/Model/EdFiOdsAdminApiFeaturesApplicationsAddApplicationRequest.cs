@@ -28,7 +28,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
     /// <summary>
     /// EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest
     /// </summary>
-    [DataContract(Name = "EdFi.Ods.Admin.Api.Features.Applications.AddApplication+Request")]
+    [DataContract(Name = "EdFi.Ods.AdminApi.Features.Applications.AddApplication.Request")]
     public partial class EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest : IEquatable<EdFiOdsAdminApiFeaturesApplicationsAddApplicationRequest>, IValidatableObject
     {
         /// <summary>

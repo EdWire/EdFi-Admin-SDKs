@@ -28,7 +28,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
     /// <summary>
     /// Wrapper schema for all error responses
     /// </summary>
-    [DataContract(Name = "EdFi.Ods.Admin.Api.Features.AdminApiError")]
+    [DataContract(Name = "EdFi.Ods.AdminApi.Features.AdminApiError")]
     public partial class EdFiOdsAdminApiFeaturesAdminApiError : IEquatable<EdFiOdsAdminApiFeaturesAdminApiError>, IValidatableObject
     {
         /// <summary>
