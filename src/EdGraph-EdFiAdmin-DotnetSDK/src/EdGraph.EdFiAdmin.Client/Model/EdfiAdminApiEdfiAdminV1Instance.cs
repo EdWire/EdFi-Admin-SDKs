@@ -55,7 +55,8 @@ namespace EdGraph.EdFiAdmin.Client.Model
         /// <param name="lastModifiedDateTime">lastModifiedDateTime.</param>
         /// <param name="apiAuthUrl">URLs.</param>
         /// <param name="selectedConnectionType">Connection.</param>
-        public EdfiAdminApiEdfiAdminV1Instance(string id = default(string), string instanceName = default(string), bool useCustomId = default(bool), string customId = default(string), string description = default(string), string connectionName = default(string), string selectedConnectionId = default(string), EdfiAdminApiEdfiAdminV1EdFiConnection selectedConnection = default(EdfiAdminApiEdfiAdminV1EdFiConnection), EdfiAdminApiEdfiAdminV1InstanceDatabases databases = default(EdfiAdminApiEdfiAdminV1InstanceDatabases), string password = default(string), string apiClientKey = default(string), string apiClientSecret = default(string), string isApiClientSecretSecured = default(string), string tenantId = default(string), string createdBy = default(string), string createdDateTime = default(string), bool isDeleted = default(bool), string lastModifiedBy = default(string), string lastModifiedDateTime = default(string), string apiAuthUrl = default(string), string selectedConnectionType = default(string))
+        /// <param name="isDefault">IsDefault.</param>
+        public EdfiAdminApiEdfiAdminV1Instance(string id = default(string), string instanceName = default(string), bool useCustomId = default(bool), string customId = default(string), string description = default(string), string connectionName = default(string), string selectedConnectionId = default(string), EdfiAdminApiEdfiAdminV1EdFiConnection selectedConnection = default(EdfiAdminApiEdfiAdminV1EdFiConnection), EdfiAdminApiEdfiAdminV1InstanceDatabases databases = default(EdfiAdminApiEdfiAdminV1InstanceDatabases), string password = default(string), string apiClientKey = default(string), string apiClientSecret = default(string), string isApiClientSecretSecured = default(string), string tenantId = default(string), string createdBy = default(string), string createdDateTime = default(string), bool isDeleted = default(bool), string lastModifiedBy = default(string), string lastModifiedDateTime = default(string), string apiAuthUrl = default(string), string selectedConnectionType = default(string), bool? isDefault = default(bool?))
         {
             this.Id = id;
             this.InstanceName = instanceName;
@@ -78,6 +79,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
             this.LastModifiedDateTime = lastModifiedDateTime;
             this.ApiAuthUrl = apiAuthUrl;
             this.SelectedConnectionType = selectedConnectionType;
+            this.IsDefault = isDefault;
         }
 
         /// <summary>
@@ -241,6 +243,13 @@ namespace EdGraph.EdFiAdmin.Client.Model
         public string SelectedConnectionType { get; set; }
 
         /// <summary>
+        /// IsDefault
+        /// </summary>
+        /// <value>IsDefault</value>
+        [DataMember(Name = "isDefault", EmitDefaultValue = true)]
+        public bool? IsDefault { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -271,6 +280,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
             sb.Append("  ApiResourcesUrls: ").Append(ApiResourcesUrls).Append("\n");
             sb.Append("  ApiCompositesUrls: ").Append(ApiCompositesUrls).Append("\n");
             sb.Append("  SelectedConnectionType: ").Append(SelectedConnectionType).Append("\n");
+            sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

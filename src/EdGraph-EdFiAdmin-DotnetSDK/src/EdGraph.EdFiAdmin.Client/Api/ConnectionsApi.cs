@@ -54,6 +54,32 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CreateEdFiConnectionWithHttpInfo(Guid tenantId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1CreateEdFiConnectionRequest? edfiAdminApiEdfiAdminV1CreateEdFiConnectionRequest = default(EdfiAdminApiEdfiAdminV1CreateEdFiConnectionRequest?), int operationIndex = 0);
         /// <summary>
+        /// Deletes an Ed-Fi Connection.
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="connectionId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse</returns>
+        EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse DeleteEdFiConnection(string tenantId, string connectionId, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0);
+
+        /// <summary>
+        /// Deletes an Ed-Fi Connection.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="connectionId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse</returns>
+        ApiResponse<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse> DeleteEdFiConnectionWithHttpInfo(string tenantId, string connectionId, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0);
+        /// <summary>
         /// Retrieves an Ed-Fi Connection by ID.
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -211,6 +237,37 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateEdFiConnectionWithHttpInfoAsync(Guid tenantId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1CreateEdFiConnectionRequest? edfiAdminApiEdfiAdminV1CreateEdFiConnectionRequest = default(EdfiAdminApiEdfiAdminV1CreateEdFiConnectionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Deletes an Ed-Fi Connection.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="connectionId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse</returns>
+        System.Threading.Tasks.Task<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse> DeleteEdFiConnectionAsync(string tenantId, string connectionId, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Deletes an Ed-Fi Connection.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="connectionId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse>> DeleteEdFiConnectionWithHttpInfoAsync(string tenantId, string connectionId, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Retrieves an Ed-Fi Connection by ID.
         /// </summary>
@@ -660,6 +717,224 @@ namespace EdGraph.EdFiAdmin.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateEdFiConnection", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Deletes an Ed-Fi Connection. 
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="connectionId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse</returns>
+        public EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse DeleteEdFiConnection(string tenantId, string connectionId, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0)
+        {
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse> localVarResponse = DeleteEdFiConnectionWithHttpInfo(tenantId, connectionId, apiVersion, xVersion);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deletes an Ed-Fi Connection. 
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="connectionId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse</returns>
+        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse> DeleteEdFiConnectionWithHttpInfo(string tenantId, string connectionId, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0)
+        {
+            // verify the required parameter 'tenantId' is set
+            if (tenantId == null)
+            {
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'tenantId' when calling ConnectionsApi->DeleteEdFiConnection");
+            }
+
+            // verify the required parameter 'connectionId' is set
+            if (connectionId == null)
+            {
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'connectionId' when calling ConnectionsApi->DeleteEdFiConnection");
+            }
+
+            EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = EdGraph.EdFiAdmin.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = EdGraph.EdFiAdmin.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("tenantId", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(tenantId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("connectionId", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(connectionId)); // path parameter
+            if (apiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToMultiMap("", "api-version", apiVersion));
+            }
+            if (xVersion != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-version", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(xVersion)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ConnectionsApi.DeleteEdFiConnection";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse>("/tenants/{tenantId}/edfiadmin/connections/{connectionId}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeleteEdFiConnection", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Deletes an Ed-Fi Connection. 
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="connectionId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse</returns>
+        public async System.Threading.Tasks.Task<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse> DeleteEdFiConnectionAsync(string tenantId, string connectionId, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse> localVarResponse = await DeleteEdFiConnectionWithHttpInfoAsync(tenantId, connectionId, apiVersion, xVersion, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deletes an Ed-Fi Connection. 
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="connectionId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse)</returns>
+        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse>> DeleteEdFiConnectionWithHttpInfoAsync(string tenantId, string connectionId, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'tenantId' is set
+            if (tenantId == null)
+            {
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'tenantId' when calling ConnectionsApi->DeleteEdFiConnection");
+            }
+
+            // verify the required parameter 'connectionId' is set
+            if (connectionId == null)
+            {
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'connectionId' when calling ConnectionsApi->DeleteEdFiConnection");
+            }
+
+
+            EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = EdGraph.EdFiAdmin.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = EdGraph.EdFiAdmin.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("tenantId", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(tenantId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("connectionId", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(connectionId)); // path parameter
+            if (apiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToMultiMap("", "api-version", apiVersion));
+            }
+            if (xVersion != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-version", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(xVersion)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ConnectionsApi.DeleteEdFiConnection";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse>("/tenants/{tenantId}/edfiadmin/connections/{connectionId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeleteEdFiConnection", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

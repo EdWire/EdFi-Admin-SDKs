@@ -260,5 +260,14 @@ namespace EdGraph.EdFiAdmin.Client.Test.Model
         {
             // TODO unit test for the property 'SelectedConnectionType'
         }
+
+        /// <summary>
+        /// Test the property 'IsDefault'
+        /// </summary>
+        [Fact]
+        public void IsDefaultTest()
+        {
+            // TODO unit test for the property 'IsDefault'
+        }
     }
 }

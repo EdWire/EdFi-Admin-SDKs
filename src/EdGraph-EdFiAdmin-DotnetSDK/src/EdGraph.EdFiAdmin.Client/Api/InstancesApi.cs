@@ -420,6 +420,34 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ResetSchoolYearAsyncWithHttpInfo(string tenantId, string instanceId, int year, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0);
         /// <summary>
+        /// Updates the isDefault property for an instance
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns></returns>
+        void SetInstanceIsDefault(string tenantId, string instanceId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = default(EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest?), int operationIndex = 0);
+
+        /// <summary>
+        /// Updates the isDefault property for an instance
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SetInstanceIsDefaultWithHttpInfo(string tenantId, string instanceId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = default(EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest?), int operationIndex = 0);
+        /// <summary>
         /// Tests the connection of the Instance.
         /// </summary>
         /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -972,6 +1000,39 @@ namespace EdGraph.EdFiAdmin.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ResetSchoolYearAsyncWithHttpInfoAsync(string tenantId, string instanceId, int year, string? apiVersion = default(string?), string? xVersion = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Updates the isDefault property for an instance
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SetInstanceIsDefaultAsync(string tenantId, string instanceId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = default(EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Updates the isDefault property for an instance
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetInstanceIsDefaultWithHttpInfoAsync(string tenantId, string instanceId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = default(EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Tests the connection of the Instance.
         /// </summary>
@@ -4354,6 +4415,236 @@ namespace EdGraph.EdFiAdmin.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResetSchoolYearAsync", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Updates the isDefault property for an instance 
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns></returns>
+        public void SetInstanceIsDefault(string tenantId, string instanceId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = default(EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest?), int operationIndex = 0)
+        {
+            SetInstanceIsDefaultWithHttpInfo(tenantId, instanceId, apiVersion, xVersion, edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest);
+        }
+
+        /// <summary>
+        /// Updates the isDefault property for an instance 
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public EdGraph.EdFiAdmin.Client.Client.ApiResponse<Object> SetInstanceIsDefaultWithHttpInfo(string tenantId, string instanceId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = default(EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest?), int operationIndex = 0)
+        {
+            // verify the required parameter 'tenantId' is set
+            if (tenantId == null)
+            {
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'tenantId' when calling InstancesApi->SetInstanceIsDefault");
+            }
+
+            // verify the required parameter 'instanceId' is set
+            if (instanceId == null)
+            {
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'instanceId' when calling InstancesApi->SetInstanceIsDefault");
+            }
+
+            EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json-patch+json",
+                "application/json",
+                "text/json",
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = EdGraph.EdFiAdmin.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = EdGraph.EdFiAdmin.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("tenantId", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(tenantId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("instanceId", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(instanceId)); // path parameter
+            if (apiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToMultiMap("", "api-version", apiVersion));
+            }
+            if (xVersion != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-version", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(xVersion)); // header parameter
+            }
+            localVarRequestOptions.Data = edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest;
+
+            localVarRequestOptions.Operation = "InstancesApi.SetInstanceIsDefault";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Put<Object>("/tenants/{tenantId}/edfiadmin/instances/{instanceId}/default", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SetInstanceIsDefault", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Updates the isDefault property for an instance 
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SetInstanceIsDefaultAsync(string tenantId, string instanceId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = default(EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await SetInstanceIsDefaultWithHttpInfoAsync(tenantId, instanceId, apiVersion, xVersion, edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Updates the isDefault property for an instance 
+        /// </summary>
+        /// <exception cref="EdGraph.EdFiAdmin.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tenantId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="apiVersion"> (optional)</param>
+        /// <param name="xVersion"> (optional)</param>
+        /// <param name="edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<EdGraph.EdFiAdmin.Client.Client.ApiResponse<Object>> SetInstanceIsDefaultWithHttpInfoAsync(string tenantId, string instanceId, string? apiVersion = default(string?), string? xVersion = default(string?), EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = default(EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'tenantId' is set
+            if (tenantId == null)
+            {
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'tenantId' when calling InstancesApi->SetInstanceIsDefault");
+            }
+
+            // verify the required parameter 'instanceId' is set
+            if (instanceId == null)
+            {
+                throw new EdGraph.EdFiAdmin.Client.Client.ApiException(400, "Missing required parameter 'instanceId' when calling InstancesApi->SetInstanceIsDefault");
+            }
+
+
+            EdGraph.EdFiAdmin.Client.Client.RequestOptions localVarRequestOptions = new EdGraph.EdFiAdmin.Client.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json-patch+json", 
+                "application/json", 
+                "text/json", 
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = EdGraph.EdFiAdmin.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = EdGraph.EdFiAdmin.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("tenantId", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(tenantId)); // path parameter
+            localVarRequestOptions.PathParameters.Add("instanceId", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(instanceId)); // path parameter
+            if (apiVersion != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToMultiMap("", "api-version", apiVersion));
+            }
+            if (xVersion != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-version", EdGraph.EdFiAdmin.Client.Client.ClientUtils.ParameterToString(xVersion)); // header parameter
+            }
+            localVarRequestOptions.Data = edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest;
+
+            localVarRequestOptions.Operation = "InstancesApi.SetInstanceIsDefault";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
+                {
+                    localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+                }
+                else if (!string.IsNullOrEmpty(this.Configuration.OAuthTokenUrl) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientId) &&
+                         !string.IsNullOrEmpty(this.Configuration.OAuthClientSecret) &&
+                         this.Configuration.OAuthFlow != null)
+                {
+                    localVarRequestOptions.OAuth = true;
+                }
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PutAsync<Object>("/tenants/{tenantId}/edfiadmin/instances/{instanceId}/default", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SetInstanceIsDefault", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

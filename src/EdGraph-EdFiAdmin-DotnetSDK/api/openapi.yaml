@@ -4,12 +4,92 @@ info:
   title: Ed-Fi Admin Api
   version: v1.0
 servers:
-- url: https://api.edgraph.dev/tenant
+- url: https://api.dev.edgraph.com/tenant
 security:
 - oauth2:
   - https://api.edgraph.com/tenant
 paths:
   /tenants/{tenantId}/edfiadmin/connections/{connectionId}:
+    delete:
+      operationId: DeleteEdFiConnection
+      parameters:
+      - description: ""
+        explode: false
+        in: path
+        name: tenantId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: ""
+        explode: false
+        in: path
+        name: connectionId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: api-version
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: X-version
+        required: false
+        schema:
+          type: string
+        style: simple
+      responses:
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Unauthorized. The request requires authentication. The OAuth
+            bearer token was either not provided or is invalid. The operation may
+            succeed once authentication has been successfully completed.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Forbidden. The request cannot be completed in the current authorization
+            context. Contact your administrator if you believe this operation should
+            be allowed.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: An unhandled error occurred on the server.See the response
+            body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.EdFiConnectionDeletedResponse'
+          description: The requested resource was successfully retrieved.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ValidationProblemDetails'
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for specific validation errors. This will typically
+            be an issue with the query parameters or the request body values.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Not Found
+      summary: Deletes an Ed-Fi Connection.
+      tags:
+      - Connections
     get:
       operationId: GetEdFiConnectionById
       parameters:
@@ -6294,6 +6374,98 @@ paths:
       summary: Clones an instance.
       tags:
       - Instances
+  /tenants/{tenantId}/edfiadmin/instances/{instanceId}/default:
+    put:
+      operationId: SetInstanceIsDefault
+      parameters:
+      - description: ""
+        explode: false
+        in: path
+        name: tenantId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: ""
+        explode: false
+        in: path
+        name: instanceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: api-version
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: X-version
+        required: false
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.SetInstanceIsDefaultRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.SetInstanceIsDefaultRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.SetInstanceIsDefaultRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.SetInstanceIsDefaultRequest'
+        description: ""
+      responses:
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Unauthorized. The request requires authentication. The OAuth
+            bearer token was either not provided or is invalid. The operation may
+            succeed once authentication has been successfully completed.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Forbidden. The request cannot be completed in the current authorization
+            context. Contact your administrator if you believe this operation should
+            be allowed.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: An unhandled error occurred on the server.See the response
+            body for details.
+        "200":
+          description: The requested resource was successfully retrieved.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ValidationProblemDetails'
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for specific validation errors. This will typically
+            be an issue with the query parameters or the request body values.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: The resource could not be found.
+      summary: Updates the isDefault property for an instance
+      tags:
+      - Instances
   /tenants/{tenantId}/edfiadmin/instances/{instanceId}/endpoints:
     get:
       operationId: GetEdFiAdminInstanceEndpoints
@@ -8751,8 +8923,8 @@ components:
         - tierId: tierId
           tierName: tierName
           sqlConnection:
-            sqlServerPasswordSecret: sqlServerPasswordSecret
             azureResourceGroupName: azureResourceGroupName
+            sqlServerPassword: sqlServerPassword
             azureServerName: azureServerName
             sqlServer: sqlServer
             sqlServerUserName: sqlServerUserName
@@ -8773,8 +8945,8 @@ components:
         - tierId: tierId
           tierName: tierName
           sqlConnection:
-            sqlServerPasswordSecret: sqlServerPasswordSecret
             azureResourceGroupName: azureResourceGroupName
+            sqlServerPassword: sqlServerPassword
             azureServerName: azureServerName
             sqlServer: sqlServer
             sqlServerUserName: sqlServerUserName
@@ -8852,6 +9024,19 @@ components:
           nullable: true
           type: string
       type: object
+    EdfiAdminApi.EdfiAdmin.V1.EdFiConnectionDeletedResponse:
+      additionalProperties: false
+      example:
+        tenantId: tenantId
+        connectionId: connectionId
+      properties:
+        connectionId:
+          nullable: true
+          type: string
+        tenantId:
+          nullable: true
+          type: string
+      type: object
     EdfiAdminApi.EdfiAdmin.V1.EdFiConnectionPaginatedItemsResponse:
       additionalProperties: false
       example:
@@ -8861,8 +9046,8 @@ components:
           - tierId: tierId
             tierName: tierName
             sqlConnection:
-              sqlServerPasswordSecret: sqlServerPasswordSecret
               azureResourceGroupName: azureResourceGroupName
+              sqlServerPassword: sqlServerPassword
               azureServerName: azureServerName
               sqlServer: sqlServer
               sqlServerUserName: sqlServerUserName
@@ -8883,8 +9068,8 @@ components:
           - tierId: tierId
             tierName: tierName
             sqlConnection:
-              sqlServerPasswordSecret: sqlServerPasswordSecret
               azureResourceGroupName: azureResourceGroupName
+              sqlServerPassword: sqlServerPassword
               azureServerName: azureServerName
               sqlServer: sqlServer
               sqlServerUserName: sqlServerUserName
@@ -8920,8 +9105,8 @@ components:
           - tierId: tierId
             tierName: tierName
             sqlConnection:
-              sqlServerPasswordSecret: sqlServerPasswordSecret
               azureResourceGroupName: azureResourceGroupName
+              sqlServerPassword: sqlServerPassword
               azureServerName: azureServerName
               sqlServer: sqlServer
               sqlServerUserName: sqlServerUserName
@@ -8942,8 +9127,8 @@ components:
           - tierId: tierId
             tierName: tierName
             sqlConnection:
-              sqlServerPasswordSecret: sqlServerPasswordSecret
               azureResourceGroupName: azureResourceGroupName
+              sqlServerPassword: sqlServerPassword
               azureServerName: azureServerName
               sqlServer: sqlServer
               sqlServerUserName: sqlServerUserName
@@ -9000,8 +9185,8 @@ components:
         tierId: tierId
         tierName: tierName
         sqlConnection:
-          sqlServerPasswordSecret: sqlServerPasswordSecret
           azureResourceGroupName: azureResourceGroupName
+          sqlServerPassword: sqlServerPassword
           azureServerName: azureServerName
           sqlServer: sqlServer
           sqlServerUserName: sqlServerUserName
@@ -9455,6 +9640,7 @@ components:
         useCustomId: true
         customId: customId
         password: password
+        isDefault: true
         isApiClientSecretSecured: isApiClientSecretSecured
         isDeleted: true
         createdBy: createdBy
@@ -9464,8 +9650,8 @@ components:
           - tierId: tierId
             tierName: tierName
             sqlConnection:
-              sqlServerPasswordSecret: sqlServerPasswordSecret
               azureResourceGroupName: azureResourceGroupName
+              sqlServerPassword: sqlServerPassword
               azureServerName: azureServerName
               sqlServer: sqlServer
               sqlServerUserName: sqlServerUserName
@@ -9486,8 +9672,8 @@ components:
           - tierId: tierId
             tierName: tierName
             sqlConnection:
-              sqlServerPasswordSecret: sqlServerPasswordSecret
               azureResourceGroupName: azureResourceGroupName
+              sqlServerPassword: sqlServerPassword
               azureServerName: azureServerName
               sqlServer: sqlServer
               sqlServerUserName: sqlServerUserName
@@ -9604,6 +9790,10 @@ components:
           description: Connection
           nullable: true
           type: string
+        isDefault:
+          description: IsDefault
+          nullable: true
+          type: boolean
       type: object
     EdfiAdminApi.EdfiAdmin.V1.InstanceDatabase:
       additionalProperties: false
@@ -9847,6 +10037,7 @@ components:
           useCustomId: true
           customId: customId
           password: password
+          isDefault: true
           isApiClientSecretSecured: isApiClientSecretSecured
           isDeleted: true
           createdBy: createdBy
@@ -9856,8 +10047,8 @@ components:
             - tierId: tierId
               tierName: tierName
               sqlConnection:
-                sqlServerPasswordSecret: sqlServerPasswordSecret
                 azureResourceGroupName: azureResourceGroupName
+                sqlServerPassword: sqlServerPassword
                 azureServerName: azureServerName
                 sqlServer: sqlServer
                 sqlServerUserName: sqlServerUserName
@@ -9878,8 +10069,8 @@ components:
             - tierId: tierId
               tierName: tierName
               sqlConnection:
-                sqlServerPasswordSecret: sqlServerPasswordSecret
                 azureResourceGroupName: azureResourceGroupName
+                sqlServerPassword: sqlServerPassword
                 azureServerName: azureServerName
                 sqlServer: sqlServer
                 sqlServerUserName: sqlServerUserName
@@ -9978,6 +10169,7 @@ components:
           useCustomId: true
           customId: customId
           password: password
+          isDefault: true
           isApiClientSecretSecured: isApiClientSecretSecured
           isDeleted: true
           createdBy: createdBy
@@ -9987,8 +10179,8 @@ components:
             - tierId: tierId
               tierName: tierName
               sqlConnection:
-                sqlServerPasswordSecret: sqlServerPasswordSecret
                 azureResourceGroupName: azureResourceGroupName
+                sqlServerPassword: sqlServerPassword
                 azureServerName: azureServerName
                 sqlServer: sqlServer
                 sqlServerUserName: sqlServerUserName
@@ -10009,8 +10201,8 @@ components:
             - tierId: tierId
               tierName: tierName
               sqlConnection:
-                sqlServerPasswordSecret: sqlServerPasswordSecret
                 azureResourceGroupName: azureResourceGroupName
+                sqlServerPassword: sqlServerPassword
                 azureServerName: azureServerName
                 sqlServer: sqlServer
                 sqlServerUserName: sqlServerUserName
@@ -10526,6 +10718,18 @@ components:
           readOnly: true
           type: array
       type: object
+    EdfiAdminApi.EdfiAdmin.V1.SetInstanceIsDefaultRequest:
+      additionalProperties: false
+      properties:
+        tenantId:
+          nullable: true
+          type: string
+        instanceId:
+          nullable: true
+          type: string
+        isDefault:
+          type: boolean
+      type: object
     EdfiAdminApi.EdfiAdmin.V1.StateEducationAgency:
       additionalProperties: false
       example:
@@ -10955,8 +11159,8 @@ components:
     EdfiAdminApi.EdfiAdmin.V1.TierSqlConnection:
       additionalProperties: false
       example:
-        sqlServerPasswordSecret: sqlServerPasswordSecret
         azureResourceGroupName: azureResourceGroupName
+        sqlServerPassword: sqlServerPassword
         azureServerName: azureServerName
         sqlServer: sqlServer
         sqlServerUserName: sqlServerUserName
@@ -10969,7 +11173,7 @@ components:
         sqlServerUserName:
           nullable: true
           type: string
-        sqlServerPasswordSecret:
+        sqlServerPassword:
           nullable: true
           type: string
         azureSubscriptionId:
@@ -11416,6 +11620,6 @@ components:
         clientCredentials:
           scopes:
             https://api.edgraph.com/tenant: EdGraph Platform - Tenant Api
-          tokenUrl: https://login.edgraph.dev/connect/token
+          tokenUrl: https://login.dev.edgraph.com/connect/token
       type: oauth2
 

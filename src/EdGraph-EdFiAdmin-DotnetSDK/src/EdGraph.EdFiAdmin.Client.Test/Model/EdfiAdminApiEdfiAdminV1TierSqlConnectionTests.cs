@@ -73,12 +73,12 @@ namespace EdGraph.EdFiAdmin.Client.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'SqlServerPasswordSecret'
+        /// Test the property 'SqlServerPassword'
         /// </summary>
         [Fact]
-        public void SqlServerPasswordSecretTest()
+        public void SqlServerPasswordTest()
         {
-            // TODO unit test for the property 'SqlServerPasswordSecret'
+            // TODO unit test for the property 'SqlServerPassword'
         }
 
         /// <summary>

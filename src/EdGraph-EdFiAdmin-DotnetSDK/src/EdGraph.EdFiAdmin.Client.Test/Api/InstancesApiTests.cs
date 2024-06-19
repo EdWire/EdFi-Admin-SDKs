@@ -272,6 +272,21 @@ namespace EdGraph.EdFiAdmin.Client.Test.Api
         }
 
         /// <summary>
+        /// Test SetInstanceIsDefault
+        /// </summary>
+        [Fact]
+        public void SetInstanceIsDefaultTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string tenantId = null;
+            //string instanceId = null;
+            //string? apiVersion = null;
+            //string? xVersion = null;
+            //EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest? edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest = null;
+            //instance.SetInstanceIsDefault(tenantId, instanceId, apiVersion, xVersion, edfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest);
+        }
+
+        /// <summary>
         /// Test TestInstanceConnection
         /// </summary>
         [Fact]

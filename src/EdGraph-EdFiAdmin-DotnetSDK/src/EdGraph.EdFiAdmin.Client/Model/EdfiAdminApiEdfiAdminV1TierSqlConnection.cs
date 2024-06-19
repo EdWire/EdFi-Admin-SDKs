@@ -36,16 +36,16 @@ namespace EdGraph.EdFiAdmin.Client.Model
         /// </summary>
         /// <param name="sqlServer">sqlServer.</param>
         /// <param name="sqlServerUserName">sqlServerUserName.</param>
-        /// <param name="sqlServerPasswordSecret">sqlServerPasswordSecret.</param>
+        /// <param name="sqlServerPassword">sqlServerPassword.</param>
         /// <param name="azureSubscriptionId">azureSubscriptionId.</param>
         /// <param name="azureResourceGroupName">azureResourceGroupName.</param>
         /// <param name="azureServerName">azureServerName.</param>
         /// <param name="azureServerElasticPoolName">azureServerElasticPoolName.</param>
-        public EdfiAdminApiEdfiAdminV1TierSqlConnection(string sqlServer = default(string), string sqlServerUserName = default(string), string sqlServerPasswordSecret = default(string), string azureSubscriptionId = default(string), string azureResourceGroupName = default(string), string azureServerName = default(string), string azureServerElasticPoolName = default(string))
+        public EdfiAdminApiEdfiAdminV1TierSqlConnection(string sqlServer = default(string), string sqlServerUserName = default(string), string sqlServerPassword = default(string), string azureSubscriptionId = default(string), string azureResourceGroupName = default(string), string azureServerName = default(string), string azureServerElasticPoolName = default(string))
         {
             this.SqlServer = sqlServer;
             this.SqlServerUserName = sqlServerUserName;
-            this.SqlServerPasswordSecret = sqlServerPasswordSecret;
+            this.SqlServerPassword = sqlServerPassword;
             this.AzureSubscriptionId = azureSubscriptionId;
             this.AzureResourceGroupName = azureResourceGroupName;
             this.AzureServerName = azureServerName;
@@ -65,10 +65,10 @@ namespace EdGraph.EdFiAdmin.Client.Model
         public string SqlServerUserName { get; set; }
 
         /// <summary>
-        /// Gets or Sets SqlServerPasswordSecret
+        /// Gets or Sets SqlServerPassword
         /// </summary>
-        [DataMember(Name = "sqlServerPasswordSecret", EmitDefaultValue = true)]
-        public string SqlServerPasswordSecret { get; set; }
+        [DataMember(Name = "sqlServerPassword", EmitDefaultValue = true)]
+        public string SqlServerPassword { get; set; }
 
         /// <summary>
         /// Gets or Sets AzureSubscriptionId
@@ -104,7 +104,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
             sb.Append("class EdfiAdminApiEdfiAdminV1TierSqlConnection {\n");
             sb.Append("  SqlServer: ").Append(SqlServer).Append("\n");
             sb.Append("  SqlServerUserName: ").Append(SqlServerUserName).Append("\n");
-            sb.Append("  SqlServerPasswordSecret: ").Append(SqlServerPasswordSecret).Append("\n");
+            sb.Append("  SqlServerPassword: ").Append(SqlServerPassword).Append("\n");
             sb.Append("  AzureSubscriptionId: ").Append(AzureSubscriptionId).Append("\n");
             sb.Append("  AzureResourceGroupName: ").Append(AzureResourceGroupName).Append("\n");
             sb.Append("  AzureServerName: ").Append(AzureServerName).Append("\n");

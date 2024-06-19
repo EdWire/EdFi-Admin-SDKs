@@ -85,7 +85,7 @@ namespace Example
         {
 
             Configuration config = new Configuration();
-            config.BasePath = "https://api.edgraph.dev/tenant";
+            config.BasePath = "https://api.dev.edgraph.com/tenant";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -115,11 +115,12 @@ namespace Example
 <a id="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.edgraph.dev/tenant*
+All URIs are relative to *https://api.dev.edgraph.com/tenant*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ConnectionsApi* | [**CreateEdFiConnection**](docs/ConnectionsApi.md#createedficonnection) | **POST** /tenants/{tenantId}/edfiadmin/connections | Creates a new Ed-Fi Connection.
+*ConnectionsApi* | [**DeleteEdFiConnection**](docs/ConnectionsApi.md#deleteedficonnection) | **DELETE** /tenants/{tenantId}/edfiadmin/connections/{connectionId} | Deletes an Ed-Fi Connection.
 *ConnectionsApi* | [**GetEdFiConnectionById**](docs/ConnectionsApi.md#getedficonnectionbyid) | **GET** /tenants/{tenantId}/edfiadmin/connections/{connectionId} | Retrieves an Ed-Fi Connection by ID.
 *ConnectionsApi* | [**GetEdFiConnectionsAsync**](docs/ConnectionsApi.md#getedficonnectionsasync) | **GET** /tenants/{tenantId}/edfiadmin/connections | Retrieves a list of Ed-Fi Connections.
 *ConnectionsApi* | [**GetEdFiOdsBackupCodesDescriptorsAsync**](docs/ConnectionsApi.md#getedfiodsbackupcodesdescriptorsasync) | **GET** /tenants/{tenantId}/edfiadmin/connections/odsbackupcodes | Retrieves a list of Ed-Fi ODS backup codes.
@@ -138,6 +139,7 @@ Class | Method | HTTP request | Description
 *InstancesApi* | [**ResetInstanceAsync**](docs/InstancesApi.md#resetinstanceasync) | **POST** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/resetinstance | Resets an Instance.
 *InstancesApi* | [**ResetInstanceCacheAsync**](docs/InstancesApi.md#resetinstancecacheasync) | **POST** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/years/{year}/resetcache | Resets the cache of an Instance and the specified ODS database.
 *InstancesApi* | [**ResetSchoolYearAsync**](docs/InstancesApi.md#resetschoolyearasync) | **POST** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/years/{year}/resetods | Resets the ODS database with the specified school year.
+*InstancesApi* | [**SetInstanceIsDefault**](docs/InstancesApi.md#setinstanceisdefault) | **PUT** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/default | Updates the isDefault property for an instance
 *InstancesApi* | [**TestInstanceConnection**](docs/InstancesApi.md#testinstanceconnection) | **POST** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/testconnection | Tests the connection of the Instance.
 *InstancesApi* | [**TestInstanceYearConnection**](docs/InstancesApi.md#testinstanceyearconnection) | **POST** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/years/{year}/testconnection | Tests the connection of the Instance.
 *InstancesApi* | [**UpdateInstanceAsync**](docs/InstancesApi.md#updateinstanceasync) | **PUT** /tenants/{tenantId}/edfiadmin/instances/{instanceId} | Updates an Instance.
@@ -242,6 +244,7 @@ Class | Method | HTTP request | Description
  - [Model.EdfiAdminApiEdfiAdminV1EdFiApplicationListResponsePaginatedItemsViewModel](docs/EdfiAdminApiEdfiAdminV1EdFiApplicationListResponsePaginatedItemsViewModel.md)
  - [Model.EdfiAdminApiEdfiAdminV1EdFiApplicationProfileResponse](docs/EdfiAdminApiEdfiAdminV1EdFiApplicationProfileResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1EdFiConnection](docs/EdfiAdminApiEdfiAdminV1EdFiConnection.md)
+ - [Model.EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse](docs/EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1EdFiConnectionPaginatedItemsResponse](docs/EdfiAdminApiEdfiAdminV1EdFiConnectionPaginatedItemsResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1EdFiConnectionTier](docs/EdfiAdminApiEdfiAdminV1EdFiConnectionTier.md)
  - [Model.EdfiAdminApiEdfiAdminV1EdFiConnectionUpdatedResponse](docs/EdfiAdminApiEdfiAdminV1EdFiConnectionUpdatedResponse.md)
@@ -277,6 +280,7 @@ Class | Method | HTTP request | Description
  - [Model.EdfiAdminApiEdfiAdminV1SaveClaimSetResponse](docs/EdfiAdminApiEdfiAdminV1SaveClaimSetResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1SchoolCountRepresentation](docs/EdfiAdminApiEdfiAdminV1SchoolCountRepresentation.md)
  - [Model.EdfiAdminApiEdfiAdminV1SchoolsByTypeReportResponse](docs/EdfiAdminApiEdfiAdminV1SchoolsByTypeReportResponse.md)
+ - [Model.EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest](docs/EdfiAdminApiEdfiAdminV1SetInstanceIsDefaultRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1StateEducationAgency](docs/EdfiAdminApiEdfiAdminV1StateEducationAgency.md)
  - [Model.EdfiAdminApiEdfiAdminV1StateEducationAgencyCreatedResponse](docs/EdfiAdminApiEdfiAdminV1StateEducationAgencyCreatedResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1StudentEconomicSituationReportResponse](docs/EdfiAdminApiEdfiAdminV1StudentEconomicSituationReportResponse.md)

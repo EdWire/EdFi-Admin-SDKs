@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SqlServer** | **string** |  | [optional] 
 **SqlServerUserName** | **string** |  | [optional] 
-**SqlServerPasswordSecret** | **string** |  | [optional] 
+**SqlServerPassword** | **string** |  | [optional] 
 **AzureSubscriptionId** | **string** |  | [optional] 
 **AzureResourceGroupName** | **string** |  | [optional] 
 **AzureServerName** | **string** |  | [optional] 

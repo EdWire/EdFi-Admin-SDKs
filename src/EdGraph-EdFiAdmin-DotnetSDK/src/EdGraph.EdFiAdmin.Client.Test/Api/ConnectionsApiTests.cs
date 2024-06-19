@@ -69,6 +69,21 @@ namespace EdGraph.EdFiAdmin.Client.Test.Api
         }
 
         /// <summary>
+        /// Test DeleteEdFiConnection
+        /// </summary>
+        [Fact]
+        public void DeleteEdFiConnectionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string tenantId = null;
+            //string connectionId = null;
+            //string? apiVersion = null;
+            //string? xVersion = null;
+            //var response = instance.DeleteEdFiConnection(tenantId, connectionId, apiVersion, xVersion);
+            //Assert.IsType<EdfiAdminApiEdfiAdminV1EdFiConnectionDeletedResponse>(response);
+        }
+
+        /// <summary>
         /// Test GetEdFiConnectionById
         /// </summary>
         [Fact]
