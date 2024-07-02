@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **ApiCompositesUrls** | **List&lt;string&gt;** |  | [optional] [readonly] 
 **SelectedConnectionType** | **string** | Connection | [optional] 
 **IsDefault** | **bool?** | IsDefault | [optional] 
+**Provider** | **string** | Provider | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

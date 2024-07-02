@@ -41,7 +41,8 @@ namespace EdGraph.EdFiAdmin.Client.Model
         /// <param name="databaseEngine">Connection.</param>
         /// <param name="selectedConnectionId">selectedConnectionId.</param>
         /// <param name="tenantId">Metadata.</param>
-        public EdfiAdminApiEdfiAdminV1CreateInstanceRequest(string instanceName = default(string), bool useCustomId = default(bool), string customId = default(string), string description = default(string), string databaseEngine = default(string), string selectedConnectionId = default(string), string tenantId = default(string))
+        /// <param name="provider">Provider.</param>
+        public EdfiAdminApiEdfiAdminV1CreateInstanceRequest(string instanceName = default(string), bool useCustomId = default(bool), string customId = default(string), string description = default(string), string databaseEngine = default(string), string selectedConnectionId = default(string), string tenantId = default(string), string provider = default(string))
         {
             this.InstanceName = instanceName;
             this.UseCustomId = useCustomId;
@@ -50,6 +51,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
             this.DatabaseEngine = databaseEngine;
             this.SelectedConnectionId = selectedConnectionId;
             this.TenantId = tenantId;
+            this.Provider = provider;
         }
 
         /// <summary>
@@ -113,6 +115,13 @@ namespace EdGraph.EdFiAdmin.Client.Model
         public string TenantId { get; set; }
 
         /// <summary>
+        /// Provider
+        /// </summary>
+        /// <value>Provider</value>
+        [DataMember(Name = "provider", EmitDefaultValue = true)]
+        public string Provider { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -128,6 +137,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
             sb.Append("  SelectedConnectionId: ").Append(SelectedConnectionId).Append("\n");
             sb.Append("  SchoolYears: ").Append(SchoolYears).Append("\n");
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

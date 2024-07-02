@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **SelectedConnectionId** | **string** |  | [optional] 
 **SchoolYears** | [**List&lt;EdfiAdminApiEdfiAdminV1CreateInstanceRequestSchoolYear&gt;**](EdfiAdminApiEdfiAdminV1CreateInstanceRequestSchoolYear.md) | School Years | [optional] [readonly] 
 **TenantId** | **string** | Metadata | [optional] 
+**Provider** | **string** | Provider | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
