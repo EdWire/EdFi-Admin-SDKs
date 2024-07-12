@@ -28,6 +28,7 @@ docs/EdfiAdminApiEdfiAdminV1CreateEducationServiceCenterRequest.md
 docs/EdfiAdminApiEdfiAdminV1CreateInstanceRequest.md
 docs/EdfiAdminApiEdfiAdminV1CreateInstanceRequestSchoolYear.md
 docs/EdfiAdminApiEdfiAdminV1CreateLocalEducationAgencyRequest.md
+docs/EdfiAdminApiEdfiAdminV1CreateOnboardingStepRequest.md
 docs/EdfiAdminApiEdfiAdminV1CreateStateEducationAgencyRequest.md
 docs/EdfiAdminApiEdfiAdminV1CreateVendorRequest.md
 docs/EdfiAdminApiEdfiAdminV1DatabaseTier.md
@@ -66,11 +67,14 @@ docs/EdfiAdminApiEdfiAdminV1InstanceDatabases.md
 docs/EdfiAdminApiEdfiAdminV1InstanceEndpointsResponse.md
 docs/EdfiAdminApiEdfiAdminV1InstanceOdsDatabase.md
 docs/EdfiAdminApiEdfiAdminV1InstancePaginatedItemsViewModel.md
+docs/EdfiAdminApiEdfiAdminV1InstanceUpdatedResponse.md
 docs/EdfiAdminApiEdfiAdminV1LocalEducationAgency.md
 docs/EdfiAdminApiEdfiAdminV1LocalEducationAgencyCreatedResponse.md
 docs/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponse.md
 docs/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponsePaginatedItemsViewModel.md
 docs/EdfiAdminApiEdfiAdminV1OdsApiConnectionEndpoint.md
+docs/EdfiAdminApiEdfiAdminV1Onboarding.md
+docs/EdfiAdminApiEdfiAdminV1OnboardingStep.md
 docs/EdfiAdminApiEdfiAdminV1RaceRepresentation.md
 docs/EdfiAdminApiEdfiAdminV1RegenerateApiClientSecretResponse.md
 docs/EdfiAdminApiEdfiAdminV1ReportsStatusResponse.md
@@ -105,6 +109,7 @@ docs/EdfiAdminApiEdfiAdminV1UpdateEdFiConnectionRequest.md
 docs/EdfiAdminApiEdfiAdminV1UpdateEducationServiceCenterRequest.md
 docs/EdfiAdminApiEdfiAdminV1UpdateInstanceRequest.md
 docs/EdfiAdminApiEdfiAdminV1UpdateLocalEducationAgencyRequest.md
+docs/EdfiAdminApiEdfiAdminV1UpdateOnboardingStepRequest.md
 docs/EdfiAdminApiEdfiAdminV1UpdateStateEducationAgencyRequest.md
 docs/EdfiAdminApiEdfiAdminV1UpdateVendorRequest.md
 docs/EdfiAdminApiEdfiAdminV1Vendor.md
@@ -113,6 +118,7 @@ docs/EdfiAdminApiEdfiAdminV1VendorListResponse.md
 docs/EdfiAdminApiEdfiAdminV1VendorListResponsePaginatedItemsViewModel.md
 docs/EdfiAdminApiEdfiAdminV1VendorProfileResponse.md
 docs/EdfiAdminApiEdfiAdminV1VendorUpdatedResponse.md
+docs/InstanceOnboardingStepsApi.md
 docs/InstancesApi.md
 docs/InstancesApplicationsApi.md
 docs/InstancesAuthorizationStrategiesApi.md
@@ -126,6 +132,7 @@ docs/InstancesVendorsApi.md
 docs/MicrosoftAspNetCoreMvcValidationProblemDetails.md
 git_push.sh
 src/EdGraph.EdFiAdmin.Client.Test/Api/ConnectionsApiTests.cs
+src/EdGraph.EdFiAdmin.Client.Test/Api/InstanceOnboardingStepsApiTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Api/InstancesApiTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Api/InstancesApplicationsApiTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Api/InstancesAuthorizationStrategiesApiTests.cs
@@ -160,6 +167,7 @@ src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1CreateEducationSe
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1CreateInstanceRequestSchoolYearTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1CreateInstanceRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1CreateLocalEducationAgencyRequestTests.cs
+src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1CreateOnboardingStepRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1CreateStateEducationAgencyRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1CreateVendorRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1DatabaseTierTests.cs
@@ -198,11 +206,14 @@ src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1InstanceEndpoints
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1InstanceOdsDatabaseTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1InstancePaginatedItemsViewModelTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1InstanceTests.cs
+src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1InstanceUpdatedResponseTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1LocalEducationAgencyCreatedResponseTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponsePaginatedItemsViewModelTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponseTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1OdsApiConnectionEndpointTests.cs
+src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1OnboardingStepTests.cs
+src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1OnboardingTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1RaceRepresentationTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1RegenerateApiClientSecretResponseTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1ReportsStatusResponseTests.cs
@@ -237,6 +248,7 @@ src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1UpdateEdFiConnect
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1UpdateEducationServiceCenterRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1UpdateInstanceRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1UpdateLocalEducationAgencyRequestTests.cs
+src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1UpdateOnboardingStepRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1UpdateStateEducationAgencyRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1UpdateVendorRequestTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1VendorCreatedResponseTests.cs
@@ -247,6 +259,7 @@ src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1VendorTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/EdfiAdminApiEdfiAdminV1VendorUpdatedResponseTests.cs
 src/EdGraph.EdFiAdmin.Client.Test/Model/MicrosoftAspNetCoreMvcValidationProblemDetailsTests.cs
 src/EdGraph.EdFiAdmin.Client/Api/ConnectionsApi.cs
+src/EdGraph.EdFiAdmin.Client/Api/InstanceOnboardingStepsApi.cs
 src/EdGraph.EdFiAdmin.Client/Api/InstancesApi.cs
 src/EdGraph.EdFiAdmin.Client/Api/InstancesApplicationsApi.cs
 src/EdGraph.EdFiAdmin.Client/Api/InstancesAuthorizationStrategiesApi.cs
@@ -301,6 +314,7 @@ src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1CreateEducationService
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1CreateInstanceRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1CreateInstanceRequestSchoolYear.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1CreateLocalEducationAgencyRequest.cs
+src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1CreateOnboardingStepRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1CreateStateEducationAgencyRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1CreateVendorRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1DatabaseTier.cs
@@ -339,11 +353,14 @@ src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1InstanceDatabases.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1InstanceEndpointsResponse.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1InstanceOdsDatabase.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1InstancePaginatedItemsViewModel.cs
+src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1InstanceUpdatedResponse.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1LocalEducationAgency.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1LocalEducationAgencyCreatedResponse.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponse.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponsePaginatedItemsViewModel.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1OdsApiConnectionEndpoint.cs
+src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1Onboarding.cs
+src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1OnboardingStep.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1RaceRepresentation.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1RegenerateApiClientSecretResponse.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1ReportsStatusResponse.cs
@@ -378,6 +395,7 @@ src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1UpdateEdFiConnectionRe
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1UpdateEducationServiceCenterRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1UpdateInstanceRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1UpdateLocalEducationAgencyRequest.cs
+src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1UpdateOnboardingStepRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1UpdateStateEducationAgencyRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1UpdateVendorRequest.cs
 src/EdGraph.EdFiAdmin.Client/Model/EdfiAdminApiEdfiAdminV1Vendor.cs

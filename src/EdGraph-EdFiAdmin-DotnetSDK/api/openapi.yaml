@@ -560,6 +560,201 @@ paths:
       summary: Creates a new Ed-Fi Connection.
       tags:
       - Connections
+  /tenants/{tenantId}/edfiadmin/instances/{instanceId}/onboardingsteps/{stepNumber}:
+    put:
+      operationId: UpdateInstanceOnboardingStepAsync
+      parameters:
+      - description: ""
+        explode: false
+        in: path
+        name: tenantId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: ""
+        explode: false
+        in: path
+        name: instanceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: ""
+        explode: false
+        in: path
+        name: stepNumber
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      - explode: true
+        in: query
+        name: api-version
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: X-version
+        required: false
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.UpdateOnboardingStepRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.UpdateOnboardingStepRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.UpdateOnboardingStepRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.UpdateOnboardingStepRequest'
+        description: ""
+      responses:
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Unauthorized. The request requires authentication. The OAuth
+            bearer token was either not provided or is invalid. The operation may
+            succeed once authentication has been successfully completed.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Forbidden. The request cannot be completed in the current authorization
+            context. Contact your administrator if you believe this operation should
+            be allowed.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: An unhandled error occurred on the server.See the response
+            body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.InstanceUpdatedResponse'
+          description: The requested resource was successfully retrieved.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ValidationProblemDetails'
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for specific validation errors. This will typically
+            be an issue with the query parameters or the request body values.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: The resource could not be found.
+      summary: Updates the status of an Onboarding Step.
+      tags:
+      - Instance Onboarding Steps
+  /tenants/{tenantId}/edfiadmin/instances/{instanceId}/onboardingsteps:
+    post:
+      operationId: CreateInstanceOnboardingStepAsync
+      parameters:
+      - description: ""
+        explode: false
+        in: path
+        name: tenantId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: ""
+        explode: false
+        in: path
+        name: instanceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: api-version
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: X-version
+        required: false
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.CreateOnboardingStepRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.CreateOnboardingStepRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.CreateOnboardingStepRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.CreateOnboardingStepRequest'
+        description: ""
+      responses:
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Unauthorized. The request requires authentication. The OAuth
+            bearer token was either not provided or is invalid. The operation may
+            succeed once authentication has been successfully completed.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: Forbidden. The request cannot be completed in the current authorization
+            context. Contact your administrator if you believe this operation should
+            be allowed.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdGraph.Common.Errors.Core.ProblemDetails'
+          description: An unhandled error occurred on the server.See the response
+            body for details.
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.InstanceUpdatedResponse'
+          description: The requested resource was successfully retrieved.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ValidationProblemDetails'
+          description: Bad Request. The request was invalid and cannot be completed.
+            See the response body for specific validation errors. This will typically
+            be an issue with the query parameters or the request body values.
+      summary: Creates an Onboarding Step.
+      tags:
+      - Instance Onboarding Steps
   /tenants/{tenantId}/edfiadmin/instances/{instanceId}/applications/{applicationId}/apiclients/{apiClientId}/access/{accessId}:
     delete:
       operationId: DeleteApplicationUserAccessAsync
@@ -8435,6 +8630,25 @@ components:
         localEducationAgency:
           $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.LocalEducationAgency'
       type: object
+    EdfiAdminApi.EdfiAdmin.V1.CreateOnboardingStepRequest:
+      additionalProperties: false
+      properties:
+        instanceId:
+          nullable: true
+          type: string
+        tenantId:
+          nullable: true
+          type: string
+        number:
+          format: int32
+          type: integer
+        description:
+          nullable: true
+          type: string
+        status:
+          nullable: true
+          type: string
+      type: object
     EdfiAdminApi.EdfiAdmin.V1.CreateStateEducationAgencyRequest:
       additionalProperties: false
       properties:
@@ -9652,6 +9866,24 @@ components:
           id: id
           connectionName: connectionName
           edFiVersion: edFiVersion
+        onboarding:
+          completedAt: completedAt
+          totalSteps: 1
+          startedAt: startedAt
+          progressPercentage: 6.0274563
+          lastCompletedStep: 5
+          steps:
+          - number: 5
+            completedAt: completedAt
+            description: description
+            startedAt: startedAt
+            status: status
+          - number: 5
+            completedAt: completedAt
+            description: description
+            startedAt: startedAt
+            status: status
+          status: status
         id: id
         apiCompositesUrls:
         - apiCompositesUrls
@@ -9803,6 +10035,8 @@ components:
           description: Provider
           nullable: true
           type: string
+        onboarding:
+          $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.Onboarding'
       type: object
     EdfiAdminApi.EdfiAdmin.V1.InstanceDatabase:
       additionalProperties: false
@@ -10054,6 +10288,24 @@ components:
             id: id
             connectionName: connectionName
             edFiVersion: edFiVersion
+          onboarding:
+            completedAt: completedAt
+            totalSteps: 1
+            startedAt: startedAt
+            progressPercentage: 6.0274563
+            lastCompletedStep: 5
+            steps:
+            - number: 5
+              completedAt: completedAt
+              description: description
+              startedAt: startedAt
+              status: status
+            - number: 5
+              completedAt: completedAt
+              description: description
+              startedAt: startedAt
+              status: status
+            status: status
           id: id
           apiCompositesUrls:
           - apiCompositesUrls
@@ -10187,6 +10439,24 @@ components:
             id: id
             connectionName: connectionName
             edFiVersion: edFiVersion
+          onboarding:
+            completedAt: completedAt
+            totalSteps: 1
+            startedAt: startedAt
+            progressPercentage: 6.0274563
+            lastCompletedStep: 5
+            steps:
+            - number: 5
+              completedAt: completedAt
+              description: description
+              startedAt: startedAt
+              status: status
+            - number: 5
+              completedAt: completedAt
+              description: description
+              startedAt: startedAt
+              status: status
+            status: status
           id: id
           apiCompositesUrls:
           - apiCompositesUrls
@@ -10270,6 +10540,19 @@ components:
             $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.Instance'
           nullable: true
           type: array
+      type: object
+    EdfiAdminApi.EdfiAdmin.V1.InstanceUpdatedResponse:
+      additionalProperties: false
+      example:
+        instanceId: instanceId
+        tenantId: tenantId
+      properties:
+        tenantId:
+          nullable: true
+          type: string
+        instanceId:
+          nullable: true
+          type: string
       type: object
     EdfiAdminApi.EdfiAdmin.V1.LocalEducationAgency:
       additionalProperties: false
@@ -10507,6 +10790,78 @@ components:
           nullable: true
           type: string
         resourcesUrl:
+          nullable: true
+          type: string
+      type: object
+    EdfiAdminApi.EdfiAdmin.V1.Onboarding:
+      additionalProperties: false
+      example:
+        completedAt: completedAt
+        totalSteps: 1
+        startedAt: startedAt
+        progressPercentage: 6.0274563
+        lastCompletedStep: 5
+        steps:
+        - number: 5
+          completedAt: completedAt
+          description: description
+          startedAt: startedAt
+          status: status
+        - number: 5
+          completedAt: completedAt
+          description: description
+          startedAt: startedAt
+          status: status
+        status: status
+      properties:
+        status:
+          nullable: true
+          type: string
+        progressPercentage:
+          format: float
+          type: number
+        totalSteps:
+          format: int32
+          type: integer
+        lastCompletedStep:
+          format: int32
+          nullable: true
+          type: integer
+        startedAt:
+          nullable: true
+          type: string
+        completedAt:
+          nullable: true
+          type: string
+        steps:
+          items:
+            $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.OnboardingStep'
+          nullable: true
+          readOnly: true
+          type: array
+      type: object
+    EdfiAdminApi.EdfiAdmin.V1.OnboardingStep:
+      additionalProperties: false
+      example:
+        number: 5
+        completedAt: completedAt
+        description: description
+        startedAt: startedAt
+        status: status
+      properties:
+        number:
+          format: int32
+          type: integer
+        description:
+          nullable: true
+          type: string
+        status:
+          nullable: true
+          type: string
+        startedAt:
+          nullable: true
+          type: string
+        completedAt:
           nullable: true
           type: string
       type: object
@@ -11345,6 +11700,22 @@ components:
           type: integer
         localEducationAgency:
           $ref: '#/components/schemas/EdfiAdminApi.EdfiAdmin.V1.LocalEducationAgency'
+      type: object
+    EdfiAdminApi.EdfiAdmin.V1.UpdateOnboardingStepRequest:
+      additionalProperties: false
+      properties:
+        instanceId:
+          nullable: true
+          type: string
+        tenantId:
+          nullable: true
+          type: string
+        number:
+          format: int32
+          type: integer
+        status:
+          nullable: true
+          type: string
       type: object
     EdfiAdminApi.EdfiAdmin.V1.UpdateStateEducationAgencyRequest:
       additionalProperties: false

@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **SelectedConnectionType** | **string** | Connection | [optional] 
 **IsDefault** | **bool?** | IsDefault | [optional] 
 **Provider** | **string** | Provider | [optional] 
+**Onboarding** | [**EdfiAdminApiEdfiAdminV1Onboarding**](EdfiAdminApiEdfiAdminV1Onboarding.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

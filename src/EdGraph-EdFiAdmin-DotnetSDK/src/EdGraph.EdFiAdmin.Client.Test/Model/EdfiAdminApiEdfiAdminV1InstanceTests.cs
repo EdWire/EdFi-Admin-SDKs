@@ -278,5 +278,14 @@ namespace EdGraph.EdFiAdmin.Client.Test.Model
         {
             // TODO unit test for the property 'Provider'
         }
+
+        /// <summary>
+        /// Test the property 'Onboarding'
+        /// </summary>
+        [Fact]
+        public void OnboardingTest()
+        {
+            // TODO unit test for the property 'Onboarding'
+        }
     }
 }

@@ -125,6 +125,8 @@ Class | Method | HTTP request | Description
 *ConnectionsApi* | [**GetEdFiConnectionsAsync**](docs/ConnectionsApi.md#getedficonnectionsasync) | **GET** /tenants/{tenantId}/edfiadmin/connections | Retrieves a list of Ed-Fi Connections.
 *ConnectionsApi* | [**GetEdFiOdsBackupCodesDescriptorsAsync**](docs/ConnectionsApi.md#getedfiodsbackupcodesdescriptorsasync) | **GET** /tenants/{tenantId}/edfiadmin/connections/odsbackupcodes | Retrieves a list of Ed-Fi ODS backup codes.
 *ConnectionsApi* | [**UpdateEdFiConnection**](docs/ConnectionsApi.md#updateedficonnection) | **PUT** /tenants/{tenantId}/edfiadmin/connections/{connectionId} | Updates an Ed-Fi Connection.
+*InstanceOnboardingStepsApi* | [**CreateInstanceOnboardingStepAsync**](docs/InstanceOnboardingStepsApi.md#createinstanceonboardingstepasync) | **POST** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/onboardingsteps | Creates an Onboarding Step.
+*InstanceOnboardingStepsApi* | [**UpdateInstanceOnboardingStepAsync**](docs/InstanceOnboardingStepsApi.md#updateinstanceonboardingstepasync) | **PUT** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/onboardingsteps/{stepNumber} | Updates the status of an Onboarding Step.
 *InstancesApi* | [**AddSchoolYear**](docs/InstancesApi.md#addschoolyear) | **POST** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/years | Adds an ODS database to an Instance.
 *InstancesApi* | [**AddSchoolYearRange**](docs/InstancesApi.md#addschoolyearrange) | **POST** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/years/bulk | Adds multiple ODS databases to an instance.
 *InstancesApi* | [**ChangeInstanceDatabaseTierAsync**](docs/InstancesApi.md#changeinstancedatabasetierasync) | **PUT** /tenants/{tenantId}/edfiadmin/instances/{instanceId}/years/{year}/tiers | Changes the selected tier of an ODS database.
@@ -228,6 +230,7 @@ Class | Method | HTTP request | Description
  - [Model.EdfiAdminApiEdfiAdminV1CreateInstanceRequest](docs/EdfiAdminApiEdfiAdminV1CreateInstanceRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1CreateInstanceRequestSchoolYear](docs/EdfiAdminApiEdfiAdminV1CreateInstanceRequestSchoolYear.md)
  - [Model.EdfiAdminApiEdfiAdminV1CreateLocalEducationAgencyRequest](docs/EdfiAdminApiEdfiAdminV1CreateLocalEducationAgencyRequest.md)
+ - [Model.EdfiAdminApiEdfiAdminV1CreateOnboardingStepRequest](docs/EdfiAdminApiEdfiAdminV1CreateOnboardingStepRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1CreateStateEducationAgencyRequest](docs/EdfiAdminApiEdfiAdminV1CreateStateEducationAgencyRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1CreateVendorRequest](docs/EdfiAdminApiEdfiAdminV1CreateVendorRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1DatabaseTier](docs/EdfiAdminApiEdfiAdminV1DatabaseTier.md)
@@ -266,11 +269,14 @@ Class | Method | HTTP request | Description
  - [Model.EdfiAdminApiEdfiAdminV1InstanceEndpointsResponse](docs/EdfiAdminApiEdfiAdminV1InstanceEndpointsResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1InstanceOdsDatabase](docs/EdfiAdminApiEdfiAdminV1InstanceOdsDatabase.md)
  - [Model.EdfiAdminApiEdfiAdminV1InstancePaginatedItemsViewModel](docs/EdfiAdminApiEdfiAdminV1InstancePaginatedItemsViewModel.md)
+ - [Model.EdfiAdminApiEdfiAdminV1InstanceUpdatedResponse](docs/EdfiAdminApiEdfiAdminV1InstanceUpdatedResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1LocalEducationAgency](docs/EdfiAdminApiEdfiAdminV1LocalEducationAgency.md)
  - [Model.EdfiAdminApiEdfiAdminV1LocalEducationAgencyCreatedResponse](docs/EdfiAdminApiEdfiAdminV1LocalEducationAgencyCreatedResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponse](docs/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponsePaginatedItemsViewModel](docs/EdfiAdminApiEdfiAdminV1LocalEducationAgencyTableViewResponsePaginatedItemsViewModel.md)
  - [Model.EdfiAdminApiEdfiAdminV1OdsApiConnectionEndpoint](docs/EdfiAdminApiEdfiAdminV1OdsApiConnectionEndpoint.md)
+ - [Model.EdfiAdminApiEdfiAdminV1Onboarding](docs/EdfiAdminApiEdfiAdminV1Onboarding.md)
+ - [Model.EdfiAdminApiEdfiAdminV1OnboardingStep](docs/EdfiAdminApiEdfiAdminV1OnboardingStep.md)
  - [Model.EdfiAdminApiEdfiAdminV1RaceRepresentation](docs/EdfiAdminApiEdfiAdminV1RaceRepresentation.md)
  - [Model.EdfiAdminApiEdfiAdminV1RegenerateApiClientSecretResponse](docs/EdfiAdminApiEdfiAdminV1RegenerateApiClientSecretResponse.md)
  - [Model.EdfiAdminApiEdfiAdminV1ReportsStatusResponse](docs/EdfiAdminApiEdfiAdminV1ReportsStatusResponse.md)
@@ -305,6 +311,7 @@ Class | Method | HTTP request | Description
  - [Model.EdfiAdminApiEdfiAdminV1UpdateEducationServiceCenterRequest](docs/EdfiAdminApiEdfiAdminV1UpdateEducationServiceCenterRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1UpdateInstanceRequest](docs/EdfiAdminApiEdfiAdminV1UpdateInstanceRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1UpdateLocalEducationAgencyRequest](docs/EdfiAdminApiEdfiAdminV1UpdateLocalEducationAgencyRequest.md)
+ - [Model.EdfiAdminApiEdfiAdminV1UpdateOnboardingStepRequest](docs/EdfiAdminApiEdfiAdminV1UpdateOnboardingStepRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1UpdateStateEducationAgencyRequest](docs/EdfiAdminApiEdfiAdminV1UpdateStateEducationAgencyRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1UpdateVendorRequest](docs/EdfiAdminApiEdfiAdminV1UpdateVendorRequest.md)
  - [Model.EdfiAdminApiEdfiAdminV1Vendor](docs/EdfiAdminApiEdfiAdminV1Vendor.md)

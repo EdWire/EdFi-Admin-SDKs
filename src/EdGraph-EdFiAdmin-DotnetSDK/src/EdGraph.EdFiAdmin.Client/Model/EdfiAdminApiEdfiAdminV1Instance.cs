@@ -57,7 +57,8 @@ namespace EdGraph.EdFiAdmin.Client.Model
         /// <param name="selectedConnectionType">Connection.</param>
         /// <param name="isDefault">IsDefault.</param>
         /// <param name="provider">Provider.</param>
-        public EdfiAdminApiEdfiAdminV1Instance(string id = default(string), string instanceName = default(string), bool useCustomId = default(bool), string customId = default(string), string description = default(string), string connectionName = default(string), string selectedConnectionId = default(string), EdfiAdminApiEdfiAdminV1EdFiConnection selectedConnection = default(EdfiAdminApiEdfiAdminV1EdFiConnection), EdfiAdminApiEdfiAdminV1InstanceDatabases databases = default(EdfiAdminApiEdfiAdminV1InstanceDatabases), string password = default(string), string apiClientKey = default(string), string apiClientSecret = default(string), string isApiClientSecretSecured = default(string), string tenantId = default(string), string createdBy = default(string), string createdDateTime = default(string), bool isDeleted = default(bool), string lastModifiedBy = default(string), string lastModifiedDateTime = default(string), string apiAuthUrl = default(string), string selectedConnectionType = default(string), bool? isDefault = default(bool?), string provider = default(string))
+        /// <param name="onboarding">onboarding.</param>
+        public EdfiAdminApiEdfiAdminV1Instance(string id = default(string), string instanceName = default(string), bool useCustomId = default(bool), string customId = default(string), string description = default(string), string connectionName = default(string), string selectedConnectionId = default(string), EdfiAdminApiEdfiAdminV1EdFiConnection selectedConnection = default(EdfiAdminApiEdfiAdminV1EdFiConnection), EdfiAdminApiEdfiAdminV1InstanceDatabases databases = default(EdfiAdminApiEdfiAdminV1InstanceDatabases), string password = default(string), string apiClientKey = default(string), string apiClientSecret = default(string), string isApiClientSecretSecured = default(string), string tenantId = default(string), string createdBy = default(string), string createdDateTime = default(string), bool isDeleted = default(bool), string lastModifiedBy = default(string), string lastModifiedDateTime = default(string), string apiAuthUrl = default(string), string selectedConnectionType = default(string), bool? isDefault = default(bool?), string provider = default(string), EdfiAdminApiEdfiAdminV1Onboarding onboarding = default(EdfiAdminApiEdfiAdminV1Onboarding))
         {
             this.Id = id;
             this.InstanceName = instanceName;
@@ -82,6 +83,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
             this.SelectedConnectionType = selectedConnectionType;
             this.IsDefault = isDefault;
             this.Provider = provider;
+            this.Onboarding = onboarding;
         }
 
         /// <summary>
@@ -259,6 +261,12 @@ namespace EdGraph.EdFiAdmin.Client.Model
         public string Provider { get; set; }
 
         /// <summary>
+        /// Gets or Sets Onboarding
+        /// </summary>
+        [DataMember(Name = "onboarding", EmitDefaultValue = false)]
+        public EdfiAdminApiEdfiAdminV1Onboarding Onboarding { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -291,6 +299,7 @@ namespace EdGraph.EdFiAdmin.Client.Model
             sb.Append("  SelectedConnectionType: ").Append(SelectedConnectionType).Append("\n");
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  Onboarding: ").Append(Onboarding).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
